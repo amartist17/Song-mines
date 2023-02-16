@@ -19,7 +19,25 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="css/custom.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <style>
+      .team-image {
+        transition: 0.3s;
+      }
+      .team-image:hover {
+        transform: scale(1.05);
+        opacity: 0.7;
+      }
+      .action-btn {
+        width: 30%;
+        margin: 2rem auto;
+        color: white !important;
+        border-color: white;
+      }
+      .action-btn:hover {
+        background-color: #54cec0 !important;
+        color: black !important;
+      }
+    </style>
     <title>Songs | Home</title>
   </head>
   <body class="stretched">
@@ -45,6 +63,13 @@
                       from a wide range of Elements &amp; simply put them on
                       your own Canvas.
                     </p>
+                    <a
+                      href="#artists"
+                      class="button button-border button-circle action-btn"
+                      data-animate="fadeInUp"
+                      data-delay="200"
+                      >Order Now</a
+                    >
                   </div>
                 </div>
                 <div
@@ -266,13 +291,22 @@
                 <div class="col-lg-3 col-md-6">
                   <div class="team">
                     <div class="team-image" style="position: relative">
-                      <img src="images/team/3.jpg" alt="John Doe" />
-
+                      <a href="/checkout">
+                        <img src="images/team/3.jpg" alt="John Doe" />
+                      </a>
                       <i
+                        id="audio-btn-1"
                         class="i-circled i-light icon-play"
-                        style="position: absolute; bottom: 10px; right: 0"
+                        style="
+                          position: absolute;
+                          bottom: 10px;
+                          right: 0;
+                          z-index: 10;
+                        "
                       ></i>
+                      <audio src="/audio/audio1.mp3" id="audio-1"></audio>
                     </div>
+
                     <div class="team-desc">
                       <div class="team-title">
                         <h4>John Doe</h4>
@@ -284,13 +318,22 @@
                 <div class="col-lg-3 col-md-6">
                   <div class="team">
                     <div class="team-image" style="position: relative">
-                      <img src="images/team/3.jpg" alt="John Doe" />
-
+                      <a href="/checkout">
+                        <img src="images/team/3.jpg" alt="John Doe" />
+                      </a>
                       <i
+                        id="audio-btn-2"
                         class="i-circled i-light icon-play"
-                        style="position: absolute; bottom: 10px; right: 0"
+                        style="
+                          position: absolute;
+                          bottom: 10px;
+                          right: 0;
+                          z-index: 10;
+                        "
                       ></i>
+                      <audio src="/audio/audio1.mp3" id="audio-2"></audio>
                     </div>
+
                     <div class="team-desc">
                       <div class="team-title">
                         <h4>John Doe</h4>
@@ -302,13 +345,22 @@
                 <div class="col-lg-3 col-md-6">
                   <div class="team">
                     <div class="team-image" style="position: relative">
-                      <img src="images/team/3.jpg" alt="John Doe" />
-
+                      <a href="/checkout">
+                        <img src="images/team/3.jpg" alt="John Doe" />
+                      </a>
                       <i
+                        id="audio-btn-3"
                         class="i-circled i-light icon-play"
-                        style="position: absolute; bottom: 10px; right: 0"
+                        style="
+                          position: absolute;
+                          bottom: 10px;
+                          right: 0;
+                          z-index: 10;
+                        "
                       ></i>
+                      <audio src="/audio/audio1.mp3" id="audio-3"></audio>
                     </div>
+
                     <div class="team-desc">
                       <div class="team-title">
                         <h4>John Doe</h4>
@@ -320,13 +372,22 @@
                 <div class="col-lg-3 col-md-6">
                   <div class="team">
                     <div class="team-image" style="position: relative">
-                      <img src="images/team/3.jpg" alt="John Doe" />
-
+                      <a href="/checkout">
+                        <img src="images/team/3.jpg" alt="John Doe" />
+                      </a>
                       <i
+                        id="audio-btn-4"
                         class="i-circled i-light icon-play"
-                        style="position: absolute; bottom: 10px; right: 0"
+                        style="
+                          position: absolute;
+                          bottom: 10px;
+                          right: 0;
+                          z-index: 10;
+                        "
                       ></i>
+                      <audio src="/audio/audio1.mp3" id="audio-4"></audio>
                     </div>
+
                     <div class="team-desc">
                       <div class="team-title">
                         <h4>John Doe</h4>
@@ -891,5 +952,6 @@
       data-cf-beacon='{"rayId":"796ed62edbd7e62a","token":"0627f0b8b73941069bc19139e63db853","version":"2022.11.3","si":100}'
       crossorigin="anonymous"
     ></script>
+    <script src="js/audio.js"></script>
   </body>
 </html>
