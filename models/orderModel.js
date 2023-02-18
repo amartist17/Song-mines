@@ -4,15 +4,28 @@ const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 
 const orderSchema = new mongoose.Schema({
-  userId: {
+  user: {
     type: mongoose.Schema.ObjectId,
     ref: "User",
   },
+  singer: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Singer",
+  },
+  razorpay_payment_id: String,
+  razorpay_order_id: String,
+  razorpay_signature: String,
   price: {
     type: Number,
   },
   desc: {
     type: String,
+  },
+
+  status: {
+    type: String,
+    enum: ["Canceled", "Processing", "Delivered"],
+    default: "Processing",
   },
   date: {
     type: Date,

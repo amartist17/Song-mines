@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&amp;display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="/css/custom.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Checkout | Canvas</title>
+  </head>
+  <body class="stretched">
+    <div id="wrapper" class="clearfix">
+      <%- include('header'); -%>
+      <section id="page-title">
+        <div class="container clearfix">
+          <h1>Checkout</h1>
+        </div>
+      </section>
+      <section id="content">
+        <div class="content-wrap">
+          <div class="container clearfix">
+            <div class="row col-mb-50 gutter-50">
+              <div class="w-100"></div>
+              <div class="col-lg-6">
+                <h4>Your Order</h4>
+                <div class="table-responsive">
+                  <table class="table cart">
+                    <thead>
+                      <tr>
+                        <th class="cart-product-thumbnail">&nbsp;</th>
+                        <th class="cart-product-name">Artist</th>
+                        <th class="cart-product-subtotal">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="cart_item">
+                        <td class="cart-product-thumbnail">
+                          <a href="#"
+                            ><img
+                              width="64"
+                              height="64"
+                              src="/images/team/3.jpg"
+                              alt="Pink Printed Dress"
+                          /></a>
+                        </td>
+                        <td class="cart-product-name">
+                          <a href="#"><%= singer.name %></a>
+                        </td>
+
+                        <td class="cart-product-subtotal">
+                          <span class="amount">$<%= singer.price %></span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="col-12 form-group">
+                    <label for="shipping-form-message"
+                      >Describe The Song <small>*</small></label
+                    >
+                    <textarea
+                      class="sm-form-control song-desc"
+                      id="shipping-form-message"
+                      name="song-desc"
+                      rows="6"
+                      cols="30"
+                    ></textarea>
+                    <input
+                      class="singerId"
+                      type="hidden"
+                      name="singerId"
+                      value="<%= singer._id %>"
+                    />
+                    <input
+                      class="singerPrice"
+                      type="hidden"
+                      name="singerPrice"
+                      value="<%= singer.price *100 %>"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h4>Cart Totals</h4>
+                <div class="table-responsive">
+                  <table class="table cart">
+                    <tbody>
+                      <tr class="cart_item">
+                        <td class="border-top-0 cart-product-name">
+                          <strong>Order Subtotal</strong>
+                        </td>
+                        <td class="border-top-0 cart-product-name">
+                          <span class="amount">$<%= singer.price %></span>
+                        </td>
+                      </tr>
+                      <tr class="cart_item">
+                        <td class="cart-product-name">
+                          <strong>Shipping</strong>
+                        </td>
+                        <td class="cart-product-name">
+                          <span class="amount">Free Delivery</span>
+                        </td>
+                      </tr>
+                      <tr class="cart_item">
+                        <td class="cart-product-name">
+                          <strong>Total</strong>
+                        </td>
+                        <td class="cart-product-name">
+                          <span class="amount color lead"
+                            ><strong>$<%= singer.price %></strong></span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <button id="rzp-button1" class="button button-3d float-end">
+                  Pay
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%- include('footer'); -%>
+    </div>
+
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <script src="/js/jquery.js"></script>
+
+    <script src="/js/plugins.min.js"></script>
+
+    <script src="/js/functions.js"></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+      integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+      data-cf-beacon='{"rayId":"796ed8bb59cae33c","token":"0627f0b8b73941069bc19139e63db853","version":"2022.11.3","si":100}'
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script>
+      let orderId;
+      let newOrder;
+      let singerId = $(".singerId").val();
+      let price = $(".singerPrice").val();
+      $(document).ready(function () {
+        let settings = {
+          url: "/order/create-order/" + singerId,
+          method: "POST",
+          timeout: 0,
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: JSON.stringify({
+            amount: price,
+            // desc: $(".song-desc").val(),
+          }),
+        };
+
+        //creates new orderId everytime
+        $.ajax(settings).done(async function (response) {
+          orderId = await response.orderId;
+          newOrder = await response.newOrder;
+          $("#rzp-button1").show();
+        });
+
+        $("#rzp-button1").click(function (e) {
+          var options = {
+            key: "rzp_test_3ClAcEv31W4gRD", // Enter the Key ID generated from the Dashboard
+            amount: price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            currency: "INR",
+            image: "https://example.com/your_logo",
+            order_id: orderId, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            handler: function (response) {
+              $.post("/order/success", {
+                response,
+                desc: $(".song-desc").val(),
+                price: price,
+                singer: singerId,
+              });
+              window.location.href = "/dashboard";
+            },
+
+            theme: {
+              color: "#3399cc",
+            },
+          };
+
+          var rzp1 = new Razorpay(options);
+
+          rzp1.on("payment.failed", function (response) {
+            // alert(response.error.code);
+            // alert(response.error.description);
+            // alert(response.error.source);
+            // alert(response.error.step);
+            // alert(response.error.reason);
+            // alert(response.error.metadata.order_id);
+            // alert(response.error.metadata.payment_id);
+          });
+
+          rzp1.open();
+          e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

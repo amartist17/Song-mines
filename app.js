@@ -19,5 +19,13 @@ app.use(express.static(path.join(__dirname, "static")));
 
 const viewRouter = require("./routes/viewRoute");
 app.use("/", viewRouter);
+const orderRouter = require("./routes/orderRoute");
+app.use("/order", orderRouter);
+
+const Singer = require("./models/singerModel");
+app.post("/add-singer", async (req, res) => {
+  let singer = await Singer.create(req.body);
+  res.send(singer);
+});
 
 module.exports = app;

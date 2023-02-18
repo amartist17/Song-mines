@@ -288,7 +288,7 @@
                 <h3>Our Artists</h3>
               </div>
               <div class="row col-mb-50 mb-0">
-                <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                   <div class="team">
                     <div class="team-image" style="position: relative">
                       <a href="/checkout">
@@ -395,7 +395,39 @@
                       </div>
                     </div>
                   </div>
+                </div> -->
+
+                <% singers.map(singer=>{ %>
+
+                <div class="col-lg-3 col-md-6">
+                  <div class="team">
+                    <div class="team-image" style="position: relative">
+                      <a href="/checkout/<%= singer._id %>">
+                        <img src="images/team/3.jpg" alt="singer image" />
+                      </a>
+                      <i
+                        id="audio-btn-4"
+                        class="i-circled i-light icon-play"
+                        style="
+                          position: absolute;
+                          bottom: 10px;
+                          right: 0;
+                          z-index: 10;
+                        "
+                      ></i>
+                      <audio src="/audio/audio1.mp3" id="audio-4"></audio>
+                    </div>
+
+                    <div class="team-desc">
+                      <div class="team-title">
+                        <h4><%= singer.name %></h4>
+                        <span>Singer</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <% }) %>
               </div>
             </div>
           </div>
