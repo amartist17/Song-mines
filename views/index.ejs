@@ -28,7 +28,7 @@
         opacity: 0.7;
       }
       .action-btn {
-        width: 30%;
+        /* width: 30%; */
         margin: 2rem auto;
         color: white !important;
         border-color: white;
@@ -36,6 +36,10 @@
       .action-btn:hover {
         background-color: #54cec0 !important;
         color: black !important;
+      }
+
+      .portfolio-image img {
+        height: 240px !important;
       }
     </style>
     <title>Songs | Home</title>
@@ -53,28 +57,32 @@
               <div class="swiper-slide dark">
                 <div class="container">
                   <div class="slider-caption slider-caption-center">
-                    <h2 data-animate="fadeInUp">Welcome to Canvas</h2>
+                    <h2 data-animate="fadeInUp">Songmines</h2>
                     <p
                       class="d-none d-sm-block"
                       data-animate="fadeInUp"
                       data-delay="200"
                     >
-                      Create just what you need for your Perfect Website. Choose
-                      from a wide range of Elements &amp; simply put them on
-                      your own Canvas.
+                      Unique music for unique moments: Let's create something
+                      amazing. <br />
+                      Our artists will compose for an occassion starting at
+                      6000/-
                     </p>
                     <a
-                      href="#artists"
+                      href="#about"
                       class="button button-border button-circle action-btn"
                       data-animate="fadeInUp"
                       data-delay="200"
-                      >Order Now</a
+                      >How it works</a
                     >
                   </div>
                 </div>
                 <div
                   class="swiper-slide-bg"
-                  style="background-image: url('images/slider/swiper/1.jpg')"
+                  style="
+                    background-image: url('https://images.pexels.com/photos/3369163/pexels-photo-3369163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                    background-position: top center;
+                  "
                 ></div>
               </div>
               <div class="swiper-slide dark">
@@ -156,14 +164,14 @@
           <div class="container">
             <div class="container clearfix">
               <div class="heading-block topmargin-sm center">
-                <h3>About Us</h3>
+                <h3>How it works</h3>
               </div>
               <div class="row col-mb-50 mb-0">
                 <div class="col-lg-4">
                   <div
                     class="heading-block fancy-title border-bottom-0 title-bottom-border"
                   >
-                    <h4>Why choose <span>Us</span>.</h4>
+                    <h4>Tell us about <span>You song</span>.</h4>
                   </div>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -176,7 +184,7 @@
                   <div
                     class="heading-block fancy-title border-bottom-0 title-bottom-border"
                   >
-                    <h4>Our <span>Mission</span>.</h4>
+                    <h4>Select your <span>Artist</span>.</h4>
                   </div>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -189,7 +197,7 @@
                   <div
                     class="heading-block fancy-title border-bottom-0 title-bottom-border"
                   >
-                    <h4>What we <span>Do</span>.</h4>
+                    <h4>Get your song <span>in a week</span>.</h4>
                   </div>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -285,7 +293,7 @@
           <div class="section my-0" id="artists">
             <div class="container">
               <div class="heading-block topmargin-sm center">
-                <h3>Our Artists</h3>
+                <h3>Select our Artists</h3>
               </div>
               <div class="row col-mb-50 mb-0">
                 <!-- <div class="col-lg-3 col-md-6">
@@ -441,16 +449,15 @@
               <h3>Examples</h3>
             </div>
             <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons"
+              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
             >
               <div class="grid-inner">
                 <div class="portfolio-image">
-                  <a href="#">
-                    <img
-                      src="images/portfolio/4/1.jpg"
-                      alt="Open Imagination"
-                    />
-                  </a>
+                  <img
+                    src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="birthday"
+                  />
+
                   <div class="bg-overlay">
                     <div
                       class="bg-overlay-content dark"
@@ -458,24 +465,14 @@
                       data-hover-parent=".portfolio-item"
                     >
                       <a
-                        href="images/portfolio/full/1.jpg"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        data-lightbox="image"
-                        title="Image"
-                        ><i class="icon-line-plus"></i
-                      ></a>
-                      <a
                         href="#"
                         class="overlay-trigger-icon bg-light text-dark"
                         data-hover-animate="fadeInDownSmall"
                         data-hover-animate-out="fadeOutUpSmall"
                         data-hover-speed="350"
                         data-hover-parent=".portfolio-item"
-                        ><i class="icon-line-ellipsis"></i
+                        data-lightbox="iframe"
+                        ><i class="icon-line-play"></i
                       ></a>
                     </div>
                     <div
@@ -486,59 +483,10 @@
                   </div>
                 </div>
                 <div class="portfolio-desc">
-                  <h3><a href="#">Open Imagination</a></h3>
-                  <span><a href="#">Media</a>, <a href="#">Icons</a></span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-illustrations"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <a href="#">
-                    <img
-                      src="images/portfolio/4/2.jpg"
-                      alt="Locked Steel Gate"
-                    />
-                  </a>
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="images/portfolio/full/2.jpg"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        data-lightbox="image"
-                        title="Image"
-                        ><i class="icon-line-plus"></i
-                      ></a>
-                      <a
-                        href="#"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        ><i class="icon-line-ellipsis"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3><a href="#">Locked Steel Gate</a></h3>
-                  <span><a href="#">Illustrations</a></span>
+                  <h3>
+                    <a href="#">Birthday</a>
+                  </h3>
+                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
                 </div>
               </div>
             </article>
@@ -547,9 +495,11 @@
             >
               <div class="grid-inner">
                 <div class="portfolio-image">
-                  <a href="#">
-                    <img src="images/portfolio/4/3.jpg" alt="Mac Sunglasses" />
-                  </a>
+                  <img
+                    src="https://images.unsplash.com/photo-1590632396158-a5765ff11bda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80"
+                    alt="Mac Sunglasses"
+                  />
+
                   <div class="bg-overlay">
                     <div
                       class="bg-overlay-content dark"
@@ -557,7 +507,7 @@
                       data-hover-parent=".portfolio-item"
                     >
                       <a
-                        href="https://vimeo.com/89396394"
+                        href="#"
                         class="overlay-trigger-icon bg-light text-dark"
                         data-hover-animate="fadeInDownSmall"
                         data-hover-animate-out="fadeOutUpSmall"
@@ -566,15 +516,6 @@
                         data-lightbox="iframe"
                         ><i class="icon-line-play"></i
                       ></a>
-                      <a
-                        href="#"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        ><i class="icon-line-ellipsis"></i
-                      ></a>
                     </div>
                     <div
                       class="bg-overlay-bg dark"
@@ -585,84 +526,22 @@
                 </div>
                 <div class="portfolio-desc">
                   <h3>
-                    <a href="#">Mac Sunglasses</a>
+                    <a href="#">Proposal</a>
                   </h3>
-                  <span
-                    ><a href="#">Graphics</a>, <a href="#">UI Elements</a></span
-                  >
+                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
                 </div>
               </div>
             </article>
             <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-icons pf-illustrations"
+              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
             >
               <div class="grid-inner">
                 <div class="portfolio-image">
-                  <a href="#">
-                    <img
-                      src="images/portfolio/4/4.jpg"
-                      alt="Open Imagination"
-                    />
-                  </a>
-                  <div class="bg-overlay" data-lightbox="gallery">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="images/portfolio/full/4.jpg"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        data-lightbox="gallery-item"
-                        ><i class="icon-line-stack-2"></i
-                      ></a>
-                      <a
-                        href="images/portfolio/full/4-1.jpg"
-                        class="d-none"
-                        data-lightbox="gallery-item"
-                      ></a>
-                      <a
-                        href="#"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        ><i class="icon-line-ellipsis"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Morning Dew</a>
-                  </h3>
-                  <span
-                    ><a href="#">Icons</a>, <a href="#">Illustrations</a></span
-                  >
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-uielements pf-media"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <a href="#">
-                    <img
-                      src="images/portfolio/4/5.jpg"
-                      alt="Console Activity"
-                    />
-                  </a>
+                  <img
+                    src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                    alt="Marrige"
+                  />
+
                   <div class="bg-overlay">
                     <div
                       class="bg-overlay-content dark"
@@ -670,128 +549,7 @@
                       data-hover-parent=".portfolio-item"
                     >
                       <a
-                        href="images/portfolio/full/5.jpg"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        data-lightbox="image"
-                        title="Image"
-                        ><i class="icon-line-plus"></i
-                      ></a>
-                      <a
                         href="#"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        ><i class="icon-line-ellipsis"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3><a href="#">Console Activity</a></h3>
-                  <span
-                    ><a href="#">UI Elements</a>, <a href="#">Media</a></span
-                  >
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-illustrations"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <a href="#">
-                    <img
-                      src="images/portfolio/4/6.jpg"
-                      alt="Open Imagination"
-                    />
-                  </a>
-                  <div class="bg-overlay" data-lightbox="gallery">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="images/portfolio/full/6.jpg"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        data-lightbox="gallery-item"
-                        ><i class="icon-line-stack-2"></i
-                      ></a>
-                      <a
-                        href="images/portfolio/full/6-1.jpg"
-                        class="d-none"
-                        data-lightbox="gallery-item"
-                      ></a>
-                      <a
-                        href="images/portfolio/full/6-2.jpg"
-                        class="d-none"
-                        data-lightbox="gallery-item"
-                      ></a>
-                      <a
-                        href="images/portfolio/full/6-3.jpg"
-                        class="d-none"
-                        data-lightbox="gallery-item"
-                      ></a>
-                      <a
-                        href="#"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        ><i class="icon-line-ellipsis"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3><a href="#">Shake It!</a></h3>
-                  <span
-                    ><a href="#">Illustrations</a>,
-                    <a href="#">Graphics</a></span
-                  >
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-uielements pf-icons"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <a href="#">
-                    <img
-                      src="images/portfolio/4/7.jpg"
-                      alt="Backpack Contents"
-                    />
-                  </a>
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://www.youtube.com/watch?v=kuceVNBTJio"
                         class="overlay-trigger-icon bg-light text-dark"
                         data-hover-animate="fadeInDownSmall"
                         data-hover-animate-out="fadeOutUpSmall"
@@ -800,6 +558,38 @@
                         data-lightbox="iframe"
                         ><i class="icon-line-play"></i
                       ></a>
+                    </div>
+                    <div
+                      class="bg-overlay-bg dark"
+                      data-hover-animate="fadeIn"
+                      data-hover-parent=".portfolio-item"
+                    ></div>
+                  </div>
+                </div>
+                <div class="portfolio-desc">
+                  <h3>
+                    <a href="#">Marrige</a>
+                  </h3>
+                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
+                </div>
+              </div>
+            </article>
+            <article
+              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
+            >
+              <div class="grid-inner">
+                <div class="portfolio-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1483752317269-423e6ad6fe2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="Mac Sunglasses"
+                  />
+
+                  <div class="bg-overlay">
+                    <div
+                      class="bg-overlay-content dark"
+                      data-hover-animate="fadeIn"
+                      data-hover-parent=".portfolio-item"
+                    >
                       <a
                         href="#"
                         class="overlay-trigger-icon bg-light text-dark"
@@ -807,7 +597,8 @@
                         data-hover-animate-out="fadeOutUpSmall"
                         data-hover-speed="350"
                         data-hover-parent=".portfolio-item"
-                        ><i class="icon-line-ellipsis"></i
+                        data-lightbox="iframe"
+                        ><i class="icon-line-play"></i
                       ></a>
                     </div>
                     <div
@@ -819,23 +610,24 @@
                 </div>
                 <div class="portfolio-desc">
                   <h3>
-                    <a href="#">Backpack Contents</a>
+                    <a href="#">Valentines Day</a>
+                    <span
+                      ><a href="#">Singer</a>, <a href="#">John Doe</a></span
+                    >
                   </h3>
-                  <span
-                    ><a href="#">UI Elements</a>, <a href="#">Icons</a></span
-                  >
                 </div>
               </div>
             </article>
-            <article class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics">
+            <article
+              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
+            >
               <div class="grid-inner">
                 <div class="portfolio-image">
-                  <a href="#">
-                    <img
-                      src="images/portfolio/4/8.jpg"
-                      alt="Sunset Bulb Glow"
-                    />
-                  </a>
+                  <img
+                    src="https://images.unsplash.com/photo-1483752317269-423e6ad6fe2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="Mac Sunglasses"
+                  />
+
                   <div class="bg-overlay">
                     <div
                       class="bg-overlay-content dark"
@@ -843,24 +635,14 @@
                       data-hover-parent=".portfolio-item"
                     >
                       <a
-                        href="images/portfolio/full/8.jpg"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        data-hover-parent=".portfolio-item"
-                        data-lightbox="image"
-                        title="Image"
-                        ><i class="icon-line-plus"></i
-                      ></a>
-                      <a
                         href="#"
                         class="overlay-trigger-icon bg-light text-dark"
                         data-hover-animate="fadeInDownSmall"
                         data-hover-animate-out="fadeOutUpSmall"
                         data-hover-speed="350"
                         data-hover-parent=".portfolio-item"
-                        ><i class="icon-line-ellipsis"></i
+                        data-lightbox="iframe"
+                        ><i class="icon-line-play"></i
                       ></a>
                     </div>
                     <div
@@ -871,8 +653,138 @@
                   </div>
                 </div>
                 <div class="portfolio-desc">
-                  <h3><a href="#">Sunset Bulb Glow</a></h3>
-                  <span><a href="#">Graphics</a></span>
+                  <h3>
+                    <a href="#">Valentines Day</a>
+                    <span
+                      ><a href="#">Singer</a>, <a href="#">John Doe</a></span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </article>
+            <article
+              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
+            >
+              <div class="grid-inner">
+                <div class="portfolio-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="birthday"
+                  />
+
+                  <div class="bg-overlay">
+                    <div
+                      class="bg-overlay-content dark"
+                      data-hover-animate="fadeIn"
+                      data-hover-parent=".portfolio-item"
+                    >
+                      <a
+                        href="#"
+                        class="overlay-trigger-icon bg-light text-dark"
+                        data-hover-animate="fadeInDownSmall"
+                        data-hover-animate-out="fadeOutUpSmall"
+                        data-hover-speed="350"
+                        data-hover-parent=".portfolio-item"
+                        data-lightbox="iframe"
+                        ><i class="icon-line-play"></i
+                      ></a>
+                    </div>
+                    <div
+                      class="bg-overlay-bg dark"
+                      data-hover-animate="fadeIn"
+                      data-hover-parent=".portfolio-item"
+                    ></div>
+                  </div>
+                </div>
+                <div class="portfolio-desc">
+                  <h3>
+                    <a href="#">Birthday</a>
+                  </h3>
+                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
+                </div>
+              </div>
+            </article>
+            <article
+              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
+            >
+              <div class="grid-inner">
+                <div class="portfolio-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1590632396158-a5765ff11bda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80"
+                    alt="Mac Sunglasses"
+                  />
+
+                  <div class="bg-overlay">
+                    <div
+                      class="bg-overlay-content dark"
+                      data-hover-animate="fadeIn"
+                      data-hover-parent=".portfolio-item"
+                    >
+                      <a
+                        href="#"
+                        class="overlay-trigger-icon bg-light text-dark"
+                        data-hover-animate="fadeInDownSmall"
+                        data-hover-animate-out="fadeOutUpSmall"
+                        data-hover-speed="350"
+                        data-hover-parent=".portfolio-item"
+                        data-lightbox="iframe"
+                        ><i class="icon-line-play"></i
+                      ></a>
+                    </div>
+                    <div
+                      class="bg-overlay-bg dark"
+                      data-hover-animate="fadeIn"
+                      data-hover-parent=".portfolio-item"
+                    ></div>
+                  </div>
+                </div>
+                <div class="portfolio-desc">
+                  <h3>
+                    <a href="#">Proposal</a>
+                  </h3>
+                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
+                </div>
+              </div>
+            </article>
+            <article
+              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
+            >
+              <div class="grid-inner">
+                <div class="portfolio-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                    alt="Marrige"
+                  />
+
+                  <div class="bg-overlay">
+                    <div
+                      class="bg-overlay-content dark"
+                      data-hover-animate="fadeIn"
+                      data-hover-parent=".portfolio-item"
+                    >
+                      <a
+                        href="#"
+                        class="overlay-trigger-icon bg-light text-dark"
+                        data-hover-animate="fadeInDownSmall"
+                        data-hover-animate-out="fadeOutUpSmall"
+                        data-hover-speed="350"
+                        data-hover-parent=".portfolio-item"
+                        data-lightbox="iframe"
+                        ><i class="icon-line-play"></i
+                      ></a>
+                    </div>
+                    <div
+                      class="bg-overlay-bg dark"
+                      data-hover-animate="fadeIn"
+                      data-hover-parent=".portfolio-item"
+                    ></div>
+                  </div>
+                </div>
+                <div class="portfolio-desc">
+                  <h3>
+                    <a href="#">Marrige</a>
+                  </h3>
+                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
                 </div>
               </div>
             </article>

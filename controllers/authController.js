@@ -7,6 +7,8 @@ const AppError = require("./../utils/appError");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const { token } = require("morgan");
+const nodemailer = require("nodemailer");
+const { findByIdAndUpdate } = require("./../models/userModel");
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -220,3 +222,47 @@ exports.logout = (req, res) => {
 //   // 4) Log user in, send jwt
 //   createSendToken(user, 200, res);
 // });
+
+exports.updatePassword = async (req, res, next) => {
+  let user = await User.findOne({ email: req.body.email });
+  console.log(req.body);
+  if (req.body.otp == user.otp) {
+    user.password = req.body.password;
+    user.passwordConfirm = req.body.passwordConfirm;
+    await user.save();
+    res.redirect("/dashboard");
+  } else {
+    res.send("Invalid Otp");
+  }
+};
+
+exports.generateOtp = async (req, res, next) => {
+  // let transporter = nodemailer.createTransport({
+  //   host: "mail.amardeepsingh.tech",
+  //   port: 465,
+  //   secure: true,
+  //   auth: {
+  //     user: process.env.EMAILID, // generated ethereal user
+  //     pass: process.env.EMAILPASSWORD, // generated ethereal password
+  //   },
+  // });
+  // // send mail with defined transport object
+  // let info = await transporter.sendMail({
+  //   from: process.env.EMAILID, // sender address
+  //   to: "gujraal2006@gmail.com", // list of receivers
+  //   subject: req.body.subject, // Subject line
+  //   text: "By: " + req.body.senderMail + "\n" + req.body.msgBody + "", // plain text body
+  // });
+  // res.redirect("/");
+
+  let otp = "";
+  for (let i = 0; i < 6; i++) {
+    otp += Math.floor(Math.random() * 10);
+  }
+  console.log(otp);
+  let user = await User.findOneAndUpdate(
+    { email: req.body.email },
+    { otp: otp }
+  );
+  res.redirect("/update-password");
+};

@@ -67,6 +67,7 @@
                                 <th>Time</th>
                                 <th>Order</th>
                                 <th>Price</th>
+                                <th>Status</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -78,8 +79,9 @@
                                     %></code
                                   >
                                 </td>
-                                <td><%= order.desc.slice(0,20) + "..."%></td>
+                                <td><%= order.desc.slice(0,80) + "..."%></td>
                                 <td><%= order.price %></td>
+                                <td><%= order.status %></td>
                               </tr>
 
                               <% }) %>

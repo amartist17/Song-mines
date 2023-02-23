@@ -43,9 +43,10 @@ const userSchema = new mongoose.Schema({
       ref: "Order",
     },
   ],
+  otp: String,
 
   //   passwordChangedAt: Date,
-  //   passwordResetToken: String,
+  // passwordResetToken: String,
   //   passwordResetExpires: Date,
   //   active: {
   //     type: Boolean,

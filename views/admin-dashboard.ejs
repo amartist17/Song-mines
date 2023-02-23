@@ -66,52 +66,54 @@
                             <thead>
                               <tr>
                                 <th>Time</th>
-                                <th>Order</th>
                                 <th>User</th>
+                                <th>Order</th>
                                 <th>Price</th>
+                                <th>Singer</th>
+                                <th>Status</th>
                               </tr>
                             </thead>
                             <tbody>
+                              <% orders.map(order=>{ %>
                               <tr>
                                 <td>
-                                  <code>5/23/2021</code>
+                                  <code
+                                    ><%= order.date.toLocaleDateString('en-US');
+                                    %></code
+                                  >
                                 </td>
-                                <td>Payment for VPS2 completed</td>
-                                <td>rahul yadav</td>
-                                <td>Rs 4000</td>
-                              </tr>
-                              <tr>
+                                <td><%= order.user.email%></td>
+                                <td style="width: 50%"><%= order.desc%></td>
+                                <td><%= order.price %></td>
+                                <td><%= order.singer.name %></td>
                                 <td>
-                                  <code>5/23/2021</code>
+                                  <form
+                                    style="margin: 0%"
+                                    action="/order/change-order-status/<%= order._id %>"
+                                    method="post"
+                                    enctype="application/x-www-form-urlencoded"
+                                  >
+                                    <select
+                                      name="status"
+                                      id=""
+                                      style="margin: 0%"
+                                    >
+                                      <option value="">
+                                        <%= order.status %>
+                                      </option>
+                                      <option value="Delivered">
+                                        Delivered
+                                      </option>
+                                      <option value="Cancelled">
+                                        Cancelled
+                                      </option>
+                                    </select>
+                                    <button type="submit">Submit</button>
+                                  </form>
                                 </td>
-                                <td>Payment for VPS2 completed</td>
-                                <td>rahul yadav</td>
-                                <td>Rs 4000</td>
                               </tr>
-                              <tr>
-                                <td>
-                                  <code>5/23/2021</code>
-                                </td>
-                                <td>Payment for VPS2 completed</td>
-                                <td>rahul yadav</td>
-                                <td>Rs 4000</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <code>5/23/2021</code>
-                                </td>
-                                <td>Payment for VPS2 completed</td>
-                                <td>rahul yadav</td>
-                                <td>Rs 4000</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <code>5/23/2021</code>
-                                </td>
-                                <td>Payment for VPS2 completed</td>
-                                <td>rahul yadav</td>
-                                <td>Rs 4000</td>
-                              </tr>
+
+                              <% }) %>
                             </tbody>
                           </table>
                         </div>

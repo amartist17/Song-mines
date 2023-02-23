@@ -10,6 +10,10 @@ router.get("/login", viewController.login);
 router.post("/login", authController.login);
 router.post("/register", authController.signup);
 router.get("/logout", authController.logout);
+router.get("/forgot", viewController.forgot);
+router.get("/update-password", viewController.updatePassword);
+router.route("/generate-otp").post(authController.generateOtp);
+router.route("/update-password").post(authController.updatePassword);
 
 router.get("/", viewController.home);
 router.get(

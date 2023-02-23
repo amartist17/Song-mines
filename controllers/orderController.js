@@ -61,3 +61,11 @@ exports.success = catchAsync(async (req, res, next) => {
   });
   next();
 });
+
+exports.change = catchAsync(async (req, res, next) => {
+  console.log(req.body);
+  let order = await Order.findByIdAndUpdate(req.params.id, {
+    status: req.body.status,
+  });
+  res.redirect("/dashboard");
+});
