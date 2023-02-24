@@ -39,27 +39,44 @@ const createSendToken = (user, statusCode, res) => {
   res.redirect("/");
 };
 
-exports.signup = catchAsync(async (req, res, next) => {
-  const newUser = await User.create({
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm,
-  });
+exports.signup = async (req, res, next) => {
+  try {
+    const newUser = await User.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+      passwordConfirm: req.body.passwordConfirm,
+    });
+  } catch (err) {
+    let message = `Duplicate value: ${Object.values(err.keyValue)[0]} for ${
+      Object.keys(err.keyValue)[0]
+    } field`;
+    return res.render("error", {
+      status: 400,
+      message: message,
+    });
+  }
 
   createSendToken(newUser, 201, res);
-});
+};
 
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password)
-    return next(new AppError("Please provide email and password", 400));
+    return res.render("error", {
+      status: 400,
+      message: "Please provide email and password",
+    });
+  // return next(new AppError("Please provide email and password", 400));
 
   let user = await User.findOne({ email }).select("+password");
 
   if (!user || !(await user.passwordCheck(password, user.password)))
-    return next(new AppError("Invalid email or password", 401));
-
+    // return next(new AppError("Invalid email or password", 401));
+    return res.render("error", {
+      status: 401,
+      message: "Invalid email or password",
+    });
   createSendToken(user, 200, res);
 });
 
@@ -80,9 +97,13 @@ exports.protect = catchAsync(async (req, res, next) => {
   //   3) Check if user still exists (not deleted)
   const currentUser = await User.findById(decoded.id);
   if (!currentUser)
-    return next(
-      new AppError("User belonging to this token doesn't Exist", 401)
-    );
+    // return next(
+    //   new AppError("User belonging to this token doesn't Exist", 401)
+    // );
+    return res.render("error", {
+      status: 401,
+      message: "User belonging to this token doesn't Exist",
+    });
 
   // 4) Check if password changed
   // if (currentUser.passwordChangedAfter(decoded.iat)) {
@@ -232,7 +253,11 @@ exports.updatePassword = async (req, res, next) => {
     await user.save();
     res.redirect("/dashboard");
   } else {
-    res.send("Invalid Otp");
+    // res.send("Invalid Otp");
+    return res.render("error", {
+      status: 401,
+      message: "Invalid OTP",
+    });
   }
 };
 
