@@ -47,6 +47,7 @@ exports.signup = async (req, res, next) => {
       password: req.body.password,
       passwordConfirm: req.body.passwordConfirm,
     });
+    createSendToken(newUser, 201, res);
   } catch (err) {
     let message = `Duplicate value: ${Object.values(err.keyValue)[0]} for ${
       Object.keys(err.keyValue)[0]
@@ -56,8 +57,6 @@ exports.signup = async (req, res, next) => {
       message: message,
     });
   }
-
-  createSendToken(newUser, 201, res);
 };
 
 exports.login = catchAsync(async (req, res, next) => {
