@@ -405,31 +405,41 @@
                   </div>
                 </div> -->
 
-                <% singers.map(singer=>{ %>
+                <% singers.map((singer,i)=>{ %>
 
                 <div class="col-lg-3 col-md-6">
                   <div class="team">
-                    <div class="team-image" style="position: relative">
-                      <a href="/checkout/<%= singer._id %>">
-                        <img src="images/team/3.jpg" alt="singer image" />
-                      </a>
-                      <i
-                        id="audio-btn-4"
-                        class="i-circled i-light icon-play"
+                    <a href="/checkout/<%= singer._id %>">
+                      <div
+                        class="team-image"
                         style="
-                          position: absolute;
-                          bottom: 10px;
-                          right: 0;
-                          z-index: 10;
+                          position: relative;
+                          background-image: url('/singers/image/<%= singer.imageName %>');
+                          height: 400px;
+                          background-repeat: no-repeat;
+                          background-size: cover;
+                          background-position: center;
                         "
-                      ></i>
-                      <audio src="/audio/audio1.mp3" id="audio-4"></audio>
-                    </div>
-
+                      ></div>
+                    </a>
                     <div class="team-desc">
                       <div class="team-title">
                         <h4><%= singer.name %></h4>
                         <span>Singer</span>
+                        <i
+                          id="audio-btn-<%= i %>"
+                          class="i-circled i-light icon-play"
+                          style="
+                            position: absolute;
+                            bottom: 10px;
+                            right: 0;
+                            z-index: 10;
+                          "
+                        ></i>
+                        <audio
+                          src="/singers/audio/<%= singer.audioName %>"
+                          id="audio-<%= i %>"
+                        ></audio>
                       </div>
                     </div>
                   </div>

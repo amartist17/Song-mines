@@ -6,7 +6,7 @@ const User = require("./../models/userModel");
 const Order = require("./../models/orderModel");
 
 exports.home = catchAsync(async (req, res, next) => {
-  let singers = await Singer.find({});
+  let singers = await Singer.find({ active: true });
   res.status(200).render("index", { singers });
 });
 
@@ -27,10 +27,11 @@ exports.dashboard = catchAsync(async (req, res, next) => {
       .sort("-date")
       .limit(10)
       .populate(["user", "singer"]);
-    console.log(orders);
-    res.status(200).render("admin-dashboard", { orders });
+    let singers = await Singer.find({ active: true });
+    // console.log(orders);
+    res.status(200).render("admin-dashboard", { orders, singers });
   } else {
-    console.log(req.user);
+    // console.log(req.user);
     let user = await User.findById(req.user._id).populate("orders");
 
     console.log(user);

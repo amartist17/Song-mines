@@ -20,13 +20,8 @@ exports.createOrder = catchAsync(async (req, res, next) => {
     notes: req.body.desc,
   };
   instance.orders.create(options, async function (err, order) {
-    // console.log(order);
-    // let newOrder = await Order.create({
-    //   user: req.user._id,
-    //   price: singer.price,
-    //   desc: req.body.desc,
-    // });
-    res.send({ orderId: order.id });
+    console.log(order);
+    return res.send({ orderId: order.id });
   });
   // return next();
 });

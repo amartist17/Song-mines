@@ -19,6 +19,10 @@ const singerSchema = new mongoose.Schema({
   imageName: {
     type: String,
   },
+  active: {
+    type: Boolean,
+    default: true,
+  },
   audioName: {
     type: String,
   },

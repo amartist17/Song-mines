@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="/css/components/bs-filestyle.css"
+      type="text/css"
+    />
+
     <link rel="stylesheet" href="css/custom.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -49,6 +55,16 @@
                         <li>
                           <a href="#tab-feeds"
                             ><i class="icon-rss2"></i> Orders</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#tab-posts"
+                            ><i class="icon-pencil2"></i>Add Singers</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#tab-deleteSinger"
+                            ><i class="icon-pencil2"></i>Delete Singers</a
                           >
                         </li>
                       </ul>
@@ -116,6 +132,104 @@
                               <% }) %>
                             </tbody>
                           </table>
+                        </div>
+                        <div class="tab-content clearfix" id="tab-posts">
+                          <form
+                            action="/add-singer"
+                            method="post"
+                            enctype="multipart/form-data"
+                            class="row"
+                          >
+                            <div class="form-group col-6">
+                              <label for="exampleInputEmail1"
+                                >Singer's Name</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                placeholder="Enter name"
+                                name="name"
+                              />
+                              <small id="emailHelp" class="form-text text-muted"
+                                >Add name in capatalize format (John Doe)</small
+                              >
+                            </div>
+                            <div class="form-group col-6">
+                              <label for="exampleInputEmail1">Price</label>
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                placeholder="Enter Price"
+                                name="price"
+                              />
+                            </div>
+                            <div class="col-lg-6 bottommargin">
+                              <label class="form-label">Singer's Image</label
+                              ><br />
+                              <input
+                                id="input-1"
+                                type="file"
+                                class="file form-control"
+                                data-show-preview="false"
+                                name="image"
+                              />
+                            </div>
+                            <div class="col-lg-6 bottommargin">
+                              <label class="form-label">Audio File</label><br />
+                              <input
+                                id="input-1"
+                                type="file"
+                                class="file form-control"
+                                data-show-preview="false"
+                                name="audio"
+                              />
+                            </div>
+                            <button
+                              class="btn btn-primary"
+                              style="width: 20%"
+                              type="submit"
+                            >
+                              Submit
+                            </button>
+                          </form>
+                        </div>
+                        <div class="tab-content clearfix" id="tab-deleteSinger">
+                          <form
+                            action="/delete-singer"
+                            method="post"
+                            enctype="multipart/form-data"
+                            class="row"
+                            style="align-items: center"
+                          >
+                            <div class="form-group col-6">
+                              <label for="exampleInputEmail1"
+                                >Singer's Name</label
+                              >
+                              <select
+                                name="id"
+                                class="selectpicker form-select"
+                              >
+                                <% singers.map(s=>{%>
+                                <option value="<%= s._id %>">
+                                  <%= s.name %>
+                                </option>
+
+                                <% }) %>
+                              </select>
+                            </div>
+
+                            <button
+                              class="btn btn-primary col-6"
+                              style="width: 20%; height: 20%"
+                              type="submit"
+                            >
+                              Submit
+                            </button>
+                          </form>
                         </div>
                       </div>
                     </div>

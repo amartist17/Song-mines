@@ -2,9 +2,10 @@ const express = require("express");
 const authController = require("./../controllers/authController");
 // const userController = require('./../controllers/userController');
 const viewController = require("./../controllers/viewController");
-
+const adminController = require("./../controllers/adminController");
 const router = express.Router({ mergeParams: true });
-
+const upload = require("express-fileupload");
+router.use(upload());
 router.use(authController.isLoggedIn);
 router.get("/login", viewController.login);
 router.post("/login", authController.login);
@@ -24,5 +25,10 @@ router.get(
 // router.get("/checkout", viewController.checkout);
 
 router.get("/dashboard", authController.protect, viewController.dashboard);
-
+router.post("/add-singer", authController.protect, adminController.addSinger);
+router.post(
+  "/delete-singer",
+  authController.protect,
+  adminController.deleteSinger
+);
 module.exports = router;
