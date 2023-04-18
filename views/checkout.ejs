@@ -67,8 +67,30 @@
                     </tbody>
                   </table>
                   <div class="col-12 form-group">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Gifter's Name</label>
+                      <input
+                        type="text"
+                        name="gifter-name"
+                        class="form-control"
+                        id="gifter-name"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter Name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Reciver's Name</label>
+                      <input
+                        type="text"
+                        name="reciver-name"
+                        class="form-control"
+                        id="reciver-name"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter Name"
+                      />
+                    </div>
                     <label for="shipping-form-message"
-                      >Describe The Song <small>*</small></label
+                      >Describe The Song / Occasion <small>*</small></label
                     >
                     <textarea
                       class="sm-form-control song-desc"
@@ -189,9 +211,16 @@
             image: "https://example.com/your_logo",
             order_id: orderId, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
             handler: function (response) {
+              let text =
+                "From: " +
+                $("#gifter-name").val() +
+                " | To: " +
+                $("#reciver-name").val() +
+                " | Description:" +
+                $(".song-desc").val();
               $.post("/order/success", {
                 response,
-                desc: $(".song-desc").val(),
+                desc: text,
                 price: price,
                 singer: singerId,
               });

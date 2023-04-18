@@ -24,11 +24,12 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 exports.dashboard = catchAsync(async (req, res, next) => {
   if (req.user.role === "admin") {
     let orders = await Order.find({})
-      .sort("-date")
+      .sort({ date: -1 })
       .limit(10)
       .populate(["user", "singer"]);
     let singers = await Singer.find({ active: true });
     // console.log(orders);
+    // orders.reverse();
     res.status(200).render("admin-dashboard", { orders, singers });
   } else {
     // console.log(req.user);
