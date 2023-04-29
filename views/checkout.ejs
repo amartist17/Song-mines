@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/css/custom.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Checkout | Canvas</title>
+    <title>Checkout | Songmines</title>
   </head>
   <body class="stretched">
     <div id="wrapper" class="clearfix">
@@ -221,6 +221,7 @@
               $.post("/order/success", {
                 response,
                 desc: text,
+                // data: {},
                 price: price,
                 singer: singerId,
               });

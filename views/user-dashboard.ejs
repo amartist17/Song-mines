@@ -82,6 +82,15 @@
                                 <td><%= order.desc.slice(0,80) + "..."%></td>
                                 <td><%= order.price %></td>
                                 <td><%= order.status %></td>
+                                <td>
+                                  For adding/changing details in song click
+                                  here➡
+                                </td>
+                                <td>
+                                  <a href="/form/<%= order._id %>"
+                                    >Make your song</a
+                                  >
+                                </td>
                               </tr>
 
                               <% }) %>

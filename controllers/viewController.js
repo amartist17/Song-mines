@@ -4,10 +4,19 @@ const AppError = require("./../utils/appError");
 const Singer = require("./../models/singerModel");
 const User = require("./../models/userModel");
 const Order = require("./../models/orderModel");
+const Form = require("./../models/formModel");
 
 exports.home = catchAsync(async (req, res, next) => {
   let singers = await Singer.find({ active: true });
   res.status(200).render("index", { singers });
+});
+exports.form = catchAsync(async (req, res, next) => {
+  res.status(200).render("form", { id: req.params.id });
+});
+exports.formSubmit = catchAsync(async (req, res, next) => {
+  req.body.id = req.params.id;
+  let newForm = await Form.create(req.body);
+  res.redirect("/");
 });
 
 exports.login = catchAsync(async (req, res, next) => {
