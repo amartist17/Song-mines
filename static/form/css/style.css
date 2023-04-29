@@ -1,0 +1,442 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#RobotoThinItalic') format('svg'); (under the Apache Software License). 
+    font-weight: 200;
+    font-style: italic;
+}
+body {
+    margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background: #3F4650;
+}
+.Header
+{
+background: #252C35; border-bottom:1px solid #DFB669; padding:7px; padding-left:10px; padding-right:10px; color:#DFB669;
+	
+}
+.PageHeading span
+{
+	
+	font-size:20px !important;
+	font-style: italic !important;
+	
+}
+.PageHeading h2
+{
+	
+	margin:0 !important;
+	padding: 0 !important;
+	
+}
+.PageHeading h2
+{
+	color:#fff !important;
+	-webkit-column-rule: #fff1ff;
+	-moz-column-rule: #fff1ff;
+	-o-column-rule: #fff1ff;
+	column-rule: #fff1ff;
+	font-size:32px !important;
+	font-weight: 500!important;
+	margin:0 !important;
+	padding: 0 !important;
+	margin-top:12px!important;
+}
+h2
+{
+	color:#fff !important;
+	padding-bottom:0 !important;
+	margin-top:5px!important;
+}
+.PageHeading h3
+{
+	color:#DFB669;
+	font-size:20px !important;
+	font-weight: 500!important;
+	margin:0 !important;
+	padding: 0 !important;
+	margin-top:10px!important;
+	margin-bottom:1px!important;
+	padding-bottom:0 !important;
+}
+.PageHeading h4
+{
+	color:#DFB669;
+	font-size:18px !important;
+	font-weight: 500!important;
+	margin:0 !important;
+	padding: 0 !important;
+	margin-top:7px!important;
+	margin-bottom:4px!important;
+}
+h4 span
+{
+	color:#DFB669;
+	font-size:13px !important;
+	font-weight: 500!important;
+	font-style:italic;
+	margin:0 !important;
+	padding: 0 !important;
+	margin-top:14px!important;
+	margin-bottom:4px!important;
+}
+h4 
+{
+	color:#DFB669;
+	font-size:16px !important;
+	font-weight: 500!important;
+	margin:0; padding:0;
+	}
+.TileHeading h4
+{
+	color:#1B56AB;
+	font-size:14px !important;
+	font-weight: 500!important;
+	margin:0 !important;
+	padding: 0 !important;
+	margin-top:4px !important;
+	margin-bottom:2px !important;
+	}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #6D7581;font-size:12px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:  #6D7581;font-size:12px;
+}
+
+::placeholder {
+  color:  #6D7581;font-size:12px;
+}
+.Instruction {
+ color:  #fff; font-size:14px; line-height: 1.2 !important; color:#92a2b6;}
+
+.TileHeading h3
+{
+	color:#1B56AB;
+	font-size:13px !important;
+	font-weight: 500!important;
+	margin:0 !important;
+	padding: 0 !important;
+	}
+.TileHeading span
+{
+	color:#2A2A2A;
+	font-size:12px !important;
+	font-weight: 400!important;
+	margin:0 !important;
+	padding: 0 !important;
+	margin-right:7px!important;
+	}
+.PageBody
+{
+	margin-top:94px;
+	background: #3F4650;
+}
+.UserName p
+{
+	color:#1B56AB;
+	font-size:15px !important;
+	font-weight: 600!important;
+	margin:0 !important;
+	padding:0 !important;
+}
+.UserName span
+{
+	color:#1B56AB;
+	font-size:14px !important;
+	font-weight: 400!important;
+	margin:0 !important;
+	padding:0 !important;
+}
+.UserName span a
+{
+	color:#1B56AB;
+	font-size:14px !important;
+	font-weight: 400!important;
+	margin:0 !important;
+	padding:0 !important;
+	text-decoration: none;
+}
+.MsgText
+{
+	color:#2A2A2A;
+	font-size:12px !important;
+	font-weight: 400!important;	
+	padding-top:10px;
+}
+
+.btn-main{
+  
+   font-size: 14px;
+   min-width:130px;
+  padding-top:8px;
+   color:#fff;
+   border:none;
+    text-align:center !important;  
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	font-weight:normal!important;
+	margin:1px 5px 1px 5px;
+	margin-bottom: 7px;
+}
+.btn-lightB
+{
+	 background:#5396E4 !important;
+     color:#fff;
+}
+.btn-darkB
+{
+	 background:#DFB669;
+	color:#fff;
+}
+.btn-main i
+{
+	margin-right:5px;
+	color:#fff!important;
+	font-size:16px!important;
+}
+.btn-icon
+{
+	 background:#EEF4FF !important;
+     color:#00489D;
+	border:1px solid #00489D;
+	font-size: 14px;
+	margin-left:4px;
+	text-decoration: none;
+}
+a .btn-icon:hover
+{
+	text-decoration: none;
+}
+.btn-icon i
+{
+	font-size: 20px;
+}
+td i {
+	color:#5396E4!important;
+	font-size:20px!important;
+}
+td a 
+{
+color:#1B56AB;	
+text-decoration: underline;	
+}
+a 
+{
+color:#1B56AB;	
+text-decoration: underline;	
+}
+.custom-table th
+{
+	
+	background: #e4effa;
+	padding:7px;
+	color:#1B56AB;
+	font-size:14px !important;
+	font-weight: 500!important;
+	border-color: #bcd1ea;
+	border-bottom: 2px solid #bcd1ea !important;
+}
+.custom-table td
+{
+	
+	color:#191919;
+	padding:7px;
+	color:#191919;
+	font-size:14px !important;
+	font-weight: 400!important;
+	border-color: #bcd1ea;
+}
+.RowAlt
+{
+	background: #f9f9f9;
+}
+.ListTile
+{
+	 -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	border:1px solid #5396E4;
+	background: #f7f7f7;
+	margin-bottom:7px;
+	padding:4px;
+	color:#00489D;
+	font-size:14px !important;
+	font-weight: 400!important;
+}
+.ListTile img
+{
+max-width: 60px;
+	 -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	border:1px solid #5396E4;
+}
+
+.FormTile
+{
+	 -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	border:1px solid #DEE9FD;
+	background: #EEF4FF;
+	margin-bottom:7px;
+	padding-left:10px;
+	padding-right:10px;
+	color:#00489D;
+	font-size:14px !important;
+	font-weight: 400!important;
+}
+label
+{
+	color:#fff;
+	font-size:14px !important;
+	font-weight: 500!important;
+	border-color: #bcd1ea;
+	margin:0;
+}
+input[type="text"]
+{
+	font-size:14px !important;
+	font-weight: 400!important;
+	border-color: #bcd1ea;
+	margin:0;
+	padding:4px;
+}
+ select
+{
+	font-size:14px !important;
+	font-weight: 400!important;
+	border-color: #bcd1ea;
+	margin:0;
+	padding:4px;
+	height:30px !important;
+}
+/*************************** CSS Nov 04 ****************************/
+.AddTile
+{
+	 -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	border:1px solid #a5b7cd;
+	background: #f7f7f7;
+	margin-bottom:7px;
+	padding:4px;
+	color:#00489D;
+	font-size:14px !important;
+	font-weight: 400!important;
+	margin-bottom:4px;
+	padding-left:4px;
+}
+.shadowbox
+{
+-webkit-box-shadow: 1px 1px 2px 2px #dfdfdf;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 2px 2px #dfdfdf;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 2px 2px #dfdfdf;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+
+.modal-title
+{
+	color:#1B56AB;
+	font-size:18px !important;
+	font-weight: 500!important;
+	margin:0 !important;
+	padding: 0 !important;
+	margin-top:10px!important;
+}
+
+/**************************** CSS added on March_01 *********************/
+h3 span{
+	color:#777777;
+	font-size:12px !important;
+	font-weight: 500!important;
+}
+.listTile
+{
+	 -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	border:1px solid #a5b7cd;
+	background: #f7f7f7;
+	padding: 6px 10px 6px 10px;
+	color:#00489D;
+	font-size:14px !important;
+	font-weight: 400!important;
+	margin-bottom:4px;
+	color: #4a4a4a;
+	font-size:16px;
+	line-height: 18px;
+}
+.listTile .form-check-label
+{
+	color: #4a4a4a;
+	font-size:16px;
+	line-height: 23px;
+}
+.CircleG
+{
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+	background: #fff;
+	border:1px solid #707070;
+	height:30px;
+	width:30px;
+	padding-top:1px;
+	color:#2A2A2A;
+	font-size:18px;
+	font-weight:500;
+	}
+.CircleB
+{
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+	background: #5396E4;
+	border:1px solid #707070;
+	height:30px;
+	width:30px;
+	padding-top:1px;
+	color:#fff;
+	font-size:18px;
+	font-weight:500;
+}
+.SquareG
+{
+	background: #fff;
+	border:1px solid #707070;
+	height:30px;
+	width:30px;
+	padding-top:1px;
+	color:#2A2A2A;
+	font-size:18px;
+	font-weight:500;
+	}
+.SquareB
+{
+	background: #5396E4;
+	border:1px solid #707070;
+	height:30px;
+	width:30px;
+	padding-top:1px;
+	color:#FFF;
+	font-size:18px;
+	font-weight:500;
+	}
