@@ -1,45 +1,125 @@
-<header id="header" class="full-header" data-sticky-class="not-dark">
-  <div id="header-wrap" style="background-color: #3f4650 !important">
-    <div class="container">
-      <div class="header-row">
-        <div id="logo">
-          <a href="/" class="standard-logo" data-dark-logo="/logo/logo.png"
-            ><img
-              style="max-height: 200px !important"
-              src="/logo/logo.png"
-              alt="Songs Mine Logo"
-          /></a>
-          <a href="/" class="retina-logo" data-dark-logo="/logo/logo.png"
-            ><img
-              style="height: 200px"
-              src="/logo/logo.png"
-              alt="Songs Mine Logo"
-          /></a>
-        </div>
-        <div class="header-misc">
-          <a
-            href="/#artists"
-            class="button button-circle button-border button-amber"
-            style="color: #ffffff; border-color: #eb9c4d"
-            ><i class="icon-line-music"></i>Order Now</a
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>songmines - ab har dil gaayega</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="/assets2/img/favicon.png" rel="icon" />
+    <link href="/assets2/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets2/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="/assets2/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="/assets2/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets2/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets2/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets2/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets2/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link href="/assets2/css/style.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Restaurantly
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+      <div
+        class="container d-flex justify-content-center justify-content-md-between"
+      >
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi d-flex align-items-center"
+            ><span>for any query WhatsApp/Botim</span></i
+          >
+          <i class="bi bi-phone d-flex align-items-center ms-4"
+            ><span
+              ><a href="https://wa.me/+919136336301" target="_blank"
+                >+91- 91 363 363 01</a
+              ></span
+            ></i
           >
         </div>
-
-        <div id="primary-menu-trigger">
-          <svg class="svg-trigger" viewBox="0 0 100 100">
-            <path
-              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
-            ></path>
-            <path d="m 30,50 h 40"></path>
-            <path
-              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
-            ></path>
-          </svg>
-        </div>
-
-        <%- include('nav'); -%>
       </div>
     </div>
-  </div>
-  <div class="header-wrap-clone"></div>
-</header>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-cente">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-lg-between"
+      >
+        <h1 class="logo me-auto me-lg-0">
+          <a href="/"><img src="/assets2/img/songminesLogo.png" /></a>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="/assets2/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto active" href="/#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="/#about">About us</a></li>
+            <li>
+              <a class="nav-link scrollto" href="/#why-us">How it works</a>
+            </li>
+            <li><a class="nav-link scrollto" href="/#menu">Singers</a></li>
+            <li>
+              <a class="nav-link scrollto" href="/#events">SM Originals</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/#testimonials">Reviews</a>
+            </li>
+            <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+            <% if(!user){ %>
+            <li><a class="nav-link scrollto" href="/login">Login</a></li>
+            <% }else{ %>
+            <li>
+              <a class="nav-link scrollto" href="/dashboard">My Account</a>
+            </li>
+            <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+            <% } %>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+        <a href="/form" class="book-a-table-btn scrollto d-none d-lg-flex"
+          >Order Now</a
+        >
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+  </body>
+</html>

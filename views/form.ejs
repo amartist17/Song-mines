@@ -1,192 +1,317 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/form/css/bootstrap.min.css">
-	   <link rel="stylesheet" href="/form/css/style.css">
-<link rel="stylesheet" href="/form/css/font-awesome.min.css">
-    <title>Form | Songmines</title>
-  </head>
-  <body>
-   
-	  <div class="container-fluid PageBody">		  
-		   <div class="row fixed-top Header d-inline-flex">
-			   <div class="pl-3"><img src="/form/images/logo.png" style="width:80px;"></div>
-<div class="pl-3 PageHeading text-start"><h2>songmines</h2><span>ab har dil gaayega . . .</span></div>
-			  
-		  </div>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+ <title>songmines - ab har dil gaayega</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets2/img/favicon.png" rel="icon">
+  <link href="/assets2/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets2/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/assets2/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets2/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets2/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets2/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets2/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets2/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi d-flex align-items-center"><span>for any query WhatsApp/Botim</span></i>
+        <i class="bi bi-phone  d-flex align-items-center ms-4"><span><a href="https://wa.me/+919136336301" target="_blank">+91- 91 363 363 01</a></span></i>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <%- include('header'); -%>
+
+  <main id="main">
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Order Now</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Order Now</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="inner-page">
+      <div class="container">
+        <div class="row">
 		  
-	  <div class="row">
-<div class="col-12">
-
-  <div class="PageHeading"><h3 style="margin-bottom:0;">Gift a song to your loved ones</h3></div>
-  
-</div>
-  
-		  
-		 
-	  </div>
-	  
-	 <div class="row">
-		  
-<div class="col">
-	<div class="pt-2">
-        <form action="/form/<%= id %>" method="post">
-		<div class="row">
-			<div class="col-lg-12 col-sm-12">
-
-  <div class="PageHeading"><h4>Your Information</h4></div>
-  
-</div>
-
-<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Your Name</label>
-                       <input type="text" name="name" value="" class="form-control">
-             </div></div>
-		<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Your Mobile Number</label>
-                       <input type="text" name="number" value="" class="form-control">
-             </div></div>
-		<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Your Contact (whatsapp/botim)</label>
-                       <input type="text" name="whatsapp" value="" class="form-control">
-             </div></div>
-			<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Your Email ID</label>
-                       <input type="text" name="email" value="" class="form-control">
-             </div></div>
-		</div>
-		
-		<div class="row">
-			<div class="col-lg-12 col-sm-12" style="height:10px; border-bottom:1px solid #DFB669; margin-bottom:10px;"></div>
-		</div>
-
-	<div class="row">
-<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Choose occasion to Gift a Song</label>
-                    <select name="occasion" class="form-control">
-                         <option>Select</option>
-						  <option>Love Expressions</option>
-                          <option>Propose</option>
-						 <option>Birthday</option>
-						 <option>Anniversary</option>
-						 <option>Friendship</option>
-						 <option>Relationship (Father, Mother, Daughter,  Husband, Wife, kids, etc.)</option>
-						 <option>Big Fat Wedding (Engagement, Pre-Wedding, Mehendi, Sangeet, Varmala, Vedic Pheras, Vidai, etc.</option>
-						 <option>Baby Shower</option>
-						 <option>School / Collège Anthem</option>
-						 <option>Brand Building Jingles</option>
-						 <option>Others (Sorry, Missing You, Heart Break, etc.)</option>
-						 </select>
-             </div></div>
-		
-		
-		<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Name of the person for whom the song to be created</label>
-                       <input type="text" name="receiverName" value="" class="form-control">
-             </div></div>
-		
-		<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Relationship of the person for whom the song to be created</label>
-                       <input type="text" name="relationship" value="" class="form-control" placeholder="Friend/Husband/Wife/Boss etc.">
-             </div></div>
-		
-		
-		
-		<div class="col-lg-12 col-sm-12"><div class="form-group">
-			<label>Tell us your story, we will make it sing</label></br>
-			<p class="Instruction mb-1">How you met; what you like about him/her; memories of him/her which pops a smile, how he/she inspired you; hangout stories; Important dates to mention; their importance in your life; embarrassing  moments you tease them with; heart of your story; anything else to mention</p>
-                       <textarea class="form-control" name="story" id="" rows="2" placeholder=""></textarea>
-             </div></div>
-		<div class="col-lg-12 col-sm-12"><div class="form-group">
-			<label>What are the things from your story that MUST be included in the song?</label>
-                       <textarea class="form-control" name="storyMust" id="" rows="1" placeholder=""></textarea>
-             </div></div>
-		
-		<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Feel of your song</label>
-                       <select name="feel" class="form-control">
-                         <option>Select</option>
-						  <option>Love</option>
-                          <option>Heart Felt</option>
-						 <option>Happy</option>
-						 <option>Sad</option>
-						    <option>Funny</option>
-						 <option>Energetic</option>
-			</select>
-             </div></div>
-		
-		<div class="col-lg-4 col-sm-12"><div class="form-group">
-                   <label>Any similar song references from Bollywood/Hollywood</label>
-                       <input type="text" name="reference" value="" class="form-control">
-             </div></div>
-		
-		<div class="col-lg-2 col-sm-12"><div class="form-group">
-                   <label>Speed/Tempo of the song</label>
-                        <select name="tempo" class="form-control">
-                         <option>Select</option>
-						  <option>Slow</option>
-                          <option>Mid Tempo</option>
-						 <option>Fast</option>
-						 <option>Whatever Suits</option>
-			</select>
-             </div></div>
-		
-		
-		<!-- <div class="col-lg-2 col-sm-12"><div class="form-group">
-                   <label>Choose Singer
-</label>
-                        <select class="form-control">
-                         <option>Select</option>
-						  <option>Male</option>
-                          <option>Female</option>
-						 <option>Whatever Suits</option>
-			</select>
-             </div> -->
+            <div class="col">
+                <div class="pt-2">
+                    <form action="/form" method="post">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+            
+              <div class="PageHeading"><h4>Your Information</h4></div>
+              
             </div>
+            
+            <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Your Name</label>
+                                   <input type="text" name="name" value="" class="form-control">
+                         </div></div>
+                    <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Your Mobile Number</label>
+                                   <input type="text" name="number" value="" class="form-control">
+                         </div></div>
+                    <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Your Contact (whatsapp/botim)</label>
+                                   <input type="text" name="whatsapp" value="" class="form-control">
+                         </div></div>
+                        <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Your Email ID</label>
+                                   <input type="text" name="email" value="" class="form-control">
+                         </div></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12" style="height:10px; border-bottom:1px solid #DFB669; margin-bottom:10px;"></div>
+                    </div>
+            
+                <form class="row">
+            <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Choose occasion to Gift a Song</label>
+                                <select name="occasion" class="form-control">
+                                     <option>Select</option>
+                                      <option>Love Expressions</option>
+                                      <option>Propose</option>
+                                     <option>Birthday</option>
+                                     <option>Anniversary</option>
+                                     <option>Friendship</option>
+                                     <option>Relationship (Father, Mother, Daughter,  Husband, Wife, kids, etc.)</option>
+                                     <option>Big Fat Wedding (Engagement, Pre-Wedding, Mehendi, Sangeet, Varmala, Vedic Pheras, Vidai, etc.</option>
+                                     <option>Baby Shower</option>
+                                     <option>School / Collège Anthem</option>
+                                     <option>Brand Building Jingles</option>
+                                     <option>Others (Sorry, Missing You, Heart Break, etc.)</option>
+                                     </select>
+                         </div></div>
+                    
+                    
+                    <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Name of the person for whom the song to be created</label>
+                                   <input type="text" name="receiverName" value="" class="form-control">
+                         </div></div>
+                    
+                    <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Relationship of the person for whom the song to be created</label>
+                                   <input type="text" name="relationship" value="" class="form-control" placeholder="Friend/Husband/Wife/Boss etc.">
+                         </div></div>
+                    
+                    
+                    
+                    <div class="col-lg-12 col-sm-12"><div class="form-group">
+                        <label>Tell us your story, we will make it sing</label></br>
+                        <p class="Instruction mb-1">How you met; what you like about him/her; memories of him/her which pops a smile, how he/she inspired you; hangout stories; Important dates to mention; their importance in your life; embarrassing  moments you tease them with; heart of your story; anything else to mention</p>
+                                   <textarea class="form-control" name="story" id="" rows="2" placeholder=""></textarea>
+                         </div></div>
+                    <div class="col-lg-12 col-sm-12"><div class="form-group">
+                        <label>What are the things from your story that MUST be included in the song?</label>
+                                   <textarea class="form-control" name="storyMust" id="" rows="1" placeholder=""></textarea>
+                         </div></div>
+                    
+                    <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Feel of your song</label>
+                                   <select name="feel" class="form-control">
+                                     <option>Select</option>
+                                      <option>Love</option>
+                                      <option>Heart Felt</option>
+                                     <option>Happy</option>
+                                     <option>Sad</option>
+                                        <option>Funny</option>
+                                     <option>Energetic</option>
+                        </select>
+                         </div></div>
+                    
+                    <div class="col-lg-4 col-sm-12"><div class="form-group">
+                               <label>Any similar song references from Bollywood/Hollywood</label>
+                                   <input type="text" name="reference" value="" class="form-control">
+                         </div></div>
+                    
+                    <div class="col-lg-2 col-sm-12"><div class="form-group">
+                               <label>Speed/Tempo of the song</label>
+                                    <select name="tempo" class="form-control">
+                                     <option>Select</option>
+                                      <option >Slow</option>
+                                      <option >Mid Tempo</option>
+                                     <option >Fast</option>
+                                     <option >Whatever Suits</option>
+                        </select>
+                         </div>
+                        </div>
+                    <div class="col-lg-2 col-sm-12"><div class="form-group">
+                               <label>Singer</label>
+                                    <select name="id" class="form-control" name="id">
+                                     <% singers.map(s=>{ %>
+                                      <option value="<%= s._id %>"><%= s.name %></option>
+                                      <% }) %>
+                        </select>
+                         </div>
+                        </div>
+                         <button type="submit"  class="" style="width: 10%; margin-top: 16px; background-color:black; color:white; border: 2px solid #D3AF71; border-radius: 16px"
+          >Order Now</button
+        >
+                        </form>
+                    
+                    <!-- <div class="col-lg-2 col-sm-12"><div class="form-group">
+                               <label>Choose Singer
+            </label>
+                                    <select class="form-control">
+                                     <option>Select</option>
+                                      <option>Male</option>
+                                      <option>Female</option>
+                                     <option>Whatever Suits</option>
+                        </select>
+                         </div> -->
+                        </div>
+                        
+                    
+                    </div>
+            
+                </div>
+                     </div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Songmines</h3>
+              <p>
+                SONGMINES, Andheri West, Mumbai, India<br><br>
+                <strong>Phone:</strong> <a href="https://wa.me/+919136336301" target="_blank">+91- 91 363 363 01</a><br>
+                <strong>Email:</strong> <a href="mailto:songminesteam@gmail.com" target="_blank">songminesteam@gmail.com</a><br>
+				  <strong>For Business queries :</strong> <a href="mailto:songmineslegal@gmail.com" target="_blank">songmineslegal@gmail.com</a>
+				  
+              </p>
+             
+				
+            </div>
+          </div>
+
+          
+
+          <div class="col-lg-5 col-md-6 footer-newsletter">
+            <h4>Join our mailing list</h4>
+            <p>Be the first one to know about our new song launches & exciting deals.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Join Mailing List">
+            </form>
+
+          </div>
+<div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">How it works</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Singers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">SM Originals</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>&nbsp;</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Reviews</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">My Account</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Order Now</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Logout</a></li>
+            </ul>
+          </div>
 			
-		
-		</div>
+			
+			
+			
+        </div>
+		  <div class="col-lg-12 col-md-12">Are you a singer, composer, lyricist, music producer, musician - collab with songmines for excellent revenue stream.
+Mail us & we will get back at <a href="mailto:songminestalent@gmail.com" target="_blank">songminestalent@gmail.com</a></div>
+		   <div class="col-lg-12 col-md-12 social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+		  
+		  
+      </div>
+    </div>
 
-	</div>
-		 </div></div>
-  
-	<div class="row pt-2">
-		   
-		   
-		   
-		   
-</div>  	  
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Songmines</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+       <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
-		  <div class="row pb-4">
-			  
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<div class="col-12 text-right"><button type="submit" class="btn btn-main btn-darkB">Submit</button>   
-			  
-			  </div>   
-			  
-		<div class="col-12 text-center"><h4><img src="images/whatsapp.png"> &nbsp;for any query whatsapp +91-91 363 363 01</h4></div>	  
-			  
-	  </div>	
-    </form>
-		  
-	  <!-- Modal -->
+  <!-- Vendor JS Files -->
+  <script src="/assets2/vendor/aos/aos.js"></script>
+  <script src="/assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets2/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets2/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets2/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets2/vendor/php-email-form/validate.js"></script>
 
+  <!-- Template Main JS File -->
+  <script src="/assets2/js/main.js"></script>
 
-    <!------------------------------------------>		
-		  
-		  
-		  
-		  
-		  
-		  </div>
-	  
-	  	  
-  <script src="/form/js/jquery-2.2.1.min.js"></script>
-	  <script src="/form/js/bootstrap.js"></script>
-  </body>
+</body>
+
 </html>

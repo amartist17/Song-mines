@@ -56,6 +56,10 @@ const formSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  paid: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 module.exports = mongoose.model("Form", formSchema);

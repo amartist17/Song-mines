@@ -18,13 +18,13 @@ router.route("/update-password").post(authController.updatePassword);
 
 router.get("/", viewController.home);
 router.get(
-  "/checkout/:singer",
+  "/checkout/:form/:singer",
   authController.protect,
   viewController.checkout
 );
 // router.get("/checkout", viewController.checkout);
-router.get("/form/:id", viewController.form);
-router.post("/form/:id", viewController.formSubmit);
+router.get("/form", viewController.form);
+router.post("/form", viewController.formSubmit);
 
 router.get("/dashboard", authController.protect, viewController.dashboard);
 router.post("/add-singer", authController.protect, adminController.addSinger);

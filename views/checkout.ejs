@@ -18,17 +18,22 @@
     <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="/css/custom.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <style>
+      label {
+        color: black !important;
+        margin: 12px 0 !important;
+      }
+    </style>
     <title>Checkout | Songmines</title>
   </head>
   <body class="stretched">
     <div id="wrapper" class="clearfix">
       <%- include('header'); -%>
-      <section id="page-title">
+      <!-- <section id="page-title">
         <div class="container clearfix">
           <h1>Checkout</h1>
         </div>
-      </section>
+      </section> -->
       <section id="content">
         <div class="content-wrap">
           <div class="container clearfix">
@@ -53,7 +58,7 @@
                               width="64"
                               height="64"
                               src="/singers/image/<%= singer.imageName %>"
-                              alt="Pink Printed Dress"
+                              alt="singer_img"
                           /></a>
                         </td>
                         <td class="cart-product-name">
@@ -89,7 +94,7 @@
                         placeholder="Enter Name"
                       />
                     </div>
-                    <label for="shipping-form-message"
+                    <!-- <label for="shipping-form-message"
                       >Describe The Song / Occasion <small>*</small></label
                     >
                     <textarea
@@ -98,13 +103,20 @@
                       name="song-desc"
                       rows="6"
                       cols="30"
-                    ></textarea>
+                    ></textarea> -->
                     <input
                       class="singerId"
                       type="hidden"
                       name="singerId"
                       value="<%= singer._id %>"
                     />
+                    <input
+                      class="formId"
+                      type="hidden"
+                      name="formId"
+                      value="<%= form %>"
+                    />
+
                     <input
                       class="singerPrice"
                       type="hidden"
@@ -181,6 +193,7 @@
       let orderId;
       let newOrder;
       let singerId = $(".singerId").val();
+      let form = $(".formId").val();
       let price = $(".singerPrice").val();
       $(document).ready(function () {
         let settings = {
@@ -215,12 +228,11 @@
                 "From: " +
                 $("#gifter-name").val() +
                 " | To: " +
-                $("#reciver-name").val() +
-                " | Description:" +
-                $(".song-desc").val();
+                $("#reciver-name").val();
               $.post("/order/success", {
                 response,
                 desc: text,
+                form: form,
                 // data: {},
                 price: price,
                 singer: singerId,

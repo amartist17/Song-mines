@@ -1,867 +1,545 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="SemiColonWeb" />
+<%- include('header'); -%>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&amp;display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link rel="stylesheet" href="css/swiper.css" type="text/css" />
-    <link rel="stylesheet" href="css/dark.css" type="text/css" />
-    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-    <link rel="stylesheet" href="css/custom.css" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      .team-image {
-        transition: 0.3s;
-      }
-      .team-image:hover {
-        transform: scale(1.05);
-        opacity: 0.7;
-      }
-      .action-btn {
-        /* width: 30%; */
-        margin: 2rem auto;
-        color: white !important;
-        border-color: white;
-      }
-      .action-btn:hover {
-        background-color: #f79629 !important;
-        color: black !important;
-      }
+<section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Gift <span>personalized songs</span></h1>
+        <h2>from your favorite singers</h2>
 
-      .portfolio-image img {
-        height: 240px !important;
-      }
-    </style>
-    <title>Home | Songmines</title>
-  </head>
-  <body class="stretched">
-    <div id="wrapper" class="clearfix">
-      <%- include('header'); -%>
-      <section
-        id="slider"
-        class="slider-element slider-parallax swiper_wrapper min-vh-60 min-vh-md-100 include-header"
-      >
-        <div class="slider-inner">
-          <div class="swiper-container swiper-parent">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide dark">
-                <div class="container">
-                  <div class="slider-caption slider-caption-center">
-                    <h2 data-animate="fadeInUp">Songmines</h2>
-                    <p
-                      class="d-none d-sm-block"
-                      data-animate="fadeInUp"
-                      data-delay="200"
-                    >
-                      Unique music for unique moments: Let's create something
-                      amazing. <br />
-                      Our artists will compose for an occassion starting at
-                      6000/-
-                    </p>
-                    <a
-                      href="#about"
-                      class="button button-border button-circle action-btn"
-                      data-animate="fadeInUp"
-                      data-delay="200"
-                      >How it works</a
-                    >
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide-bg"
-                  style="
-                    background-image: url('/homepage/slider2.png');
-                    background-position: top center;
-                  "
-                ></div>
-              </div>
-
-              <div class="swiper-slide dark">
-                <div class="container">
-                  <div class="slider-caption slider-caption-center">
-                    <h2 data-animate="fadeInUp">Beautifully Flexible</h2>
-                    <p
-                      class="d-none d-sm-block"
-                      data-animate="fadeInUp"
-                      data-delay="200"
-                    >
-                      Looks beautiful &amp; ultra-sharp on Retina Screen
-                      Displays. Powerful Layout with Responsive functionality
-                      that can be adapted to any screen size.
-                    </p>
-                    <a
-                      href="#about"
-                      class="button button-border button-circle action-btn"
-                      data-animate="fadeInUp"
-                      data-delay="200"
-                      >How it works</a
-                    >
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide-bg"
-                  style="
-                    background-image: url('/homepage/slider3.png');
-                    background-position: top center;
-                  "
-                ></div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="container">
-                  <div class="slider-caption">
-                    <h2 data-animate="fadeInUp">Great Performance</h2>
-                    <p
-                      class="d-none d-sm-block"
-                      data-animate="fadeInUp"
-                      data-delay="200"
-                    >
-                      You'll be surprised to see the Final Results of your
-                      Creation &amp; would crave for more.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide-bg"
-                  style="
-                    background-image: url('/homepage/slider.png');
-                    background-position: center top;
-                  "
-                ></div>
-              </div>
-            </div>
-            <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
-            <div class="slider-arrow-right">
-              <i class="icon-angle-right"></i>
-            </div>
-          </div>
-          <a
-            href="#"
-            data-scrollto="#content"
-            data-offset="100"
-            class="one-page-arrow dark"
-            ><i class="icon-angle-down infinite animated fadeInDown"></i
-          ></a>
+        <div class="btns">
+         
+          <a href="/#artists" class="btn-book animated fadeInUp scrollto">Order Now</a>
         </div>
-      </section>
+      </div>
+      <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+        <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
+      </div>
 
-      <section id="content">
-        <div id="about" class="content-wrap">
-          <div class="container">
-            <div class="container clearfix">
-              <div class="heading-block topmargin-sm center">
-                <h3>How it works</h3>
-              </div>
-              <div class="row col-mb-50 mb-0">
-                <div class="col-lg-4">
-                  <div
-                    class="heading-block fancy-title border-bottom-0 title-bottom-border"
-                  >
-                    <h4>Tell us about <span>You song</span>.</h4>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quasi quidem minus id omnis, nam expedita, ea fuga commodi
-                    voluptas iusto, hic autem deleniti dolores explicabo labore
-                    enim repellat earum perspiciatis.
-                  </p>
-                </div>
-                <div class="col-lg-4">
-                  <div
-                    class="heading-block fancy-title border-bottom-0 title-bottom-border"
-                  >
-                    <h4>Select your <span>Artist</span>.</h4>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quasi quidem minus id omnis, nam expedita, ea fuga commodi
-                    voluptas iusto, hic autem deleniti dolores explicabo labore
-                    enim repellat earum perspiciatis.
-                  </p>
-                </div>
-                <div class="col-lg-4">
-                  <div
-                    class="heading-block fancy-title border-bottom-0 title-bottom-border"
-                  >
-                    <h4>Get your song <span>in a week</span>.</h4>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quasi quidem minus id omnis, nam expedita, ea fuga commodi
-                    voluptas iusto, hic autem deleniti dolores explicabo labore
-                    enim repellat earum perspiciatis.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="section m-0">
-              <div class="container clearfix">
-                <div class="row col-mb-50">
-                  <div
-                    class="col-sm-6 col-lg-3 text-center"
-                    data-animate="bounceIn"
-                  >
-                    <i
-                      class="i-plain i-xlarge mx-auto icon-line2-directions"
-                    ></i>
-                    <div class="counter counter-lined">
-                      <span
-                        data-from="100"
-                        data-to="846"
-                        data-refresh-interval="50"
-                        data-speed="2000"
-                      ></span
-                      >K+
-                    </div>
-                    <h5>Lines of Codes</h5>
-                  </div>
-                  <div
-                    class="col-sm-6 col-lg-3 text-center"
-                    data-animate="bounceIn"
-                    data-delay="200"
-                  >
-                    <i
-                      class="i-plain i-xlarge mx-auto mb-0 icon-line2-graph"
-                    ></i>
-                    <div class="counter counter-lined">
-                      <span
-                        data-from="3000"
-                        data-to="15360"
-                        data-refresh-interval="100"
-                        data-speed="2500"
-                      ></span
-                      >+
-                    </div>
-                    <h5>KBs of HTML Files</h5>
-                  </div>
-                  <div
-                    class="col-sm-6 col-lg-3 text-center"
-                    data-animate="bounceIn"
-                    data-delay="400"
-                  >
-                    <i
-                      class="i-plain i-xlarge mx-auto mb-0 icon-line2-layers"
-                    ></i>
-                    <div class="counter counter-lined">
-                      <span
-                        data-from="10"
-                        data-to="408"
-                        data-refresh-interval="25"
-                        data-speed="3500"
-                      ></span
-                      >*
-                    </div>
-                    <h5>No. of Templates</h5>
-                  </div>
-                  <div
-                    class="col-sm-6 col-lg-3 text-center"
-                    data-animate="bounceIn"
-                    data-delay="600"
-                  >
-                    <i
-                      class="i-plain i-xlarge mx-auto mb-0 icon-line2-clock"
-                    ></i>
-                    <div class="counter counter-lined">
-                      <span
-                        data-from="60"
-                        data-to="1200"
-                        data-refresh-interval="30"
-                        data-speed="2700"
-                      ></span
-                      >+
-                    </div>
-                    <h5>Hours of Coding</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
+    </div>
+  </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-lg-5 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+          <div class="about-img">
+            <img src="assets2/img/about.jpg" alt="">
           </div>
-          <div class="section my-0" id="artists">
-            <div class="container">
-              <div class="heading-block topmargin-sm center">
-                <h3>Select our Artists</h3>
-              </div>
-              <div class="row col-mb-50 mb-0">
-                <!-- <div class="col-lg-3 col-md-6">
-                  <div class="team">
-                    <div class="team-image" style="position: relative">
-                      <a href="/checkout">
-                        <img src="images/team/3.jpg" alt="John Doe" />
-                      </a>
-                      <i
-                        id="audio-btn-1"
-                        class="i-circled i-light icon-play"
-                        style="
-                          position: absolute;
-                          bottom: 10px;
-                          right: 0;
-                          z-index: 10;
-                        "
-                      ></i>
-                      <audio src="/audio/audio1.mp3" id="audio-1"></audio>
-                    </div>
+        </div>
+        <div class="col-lg-7 pt-4 pt-lg-0 order-2 order-lg-1 content">
+          <h2>About Us</h2>
+          <p class="fst-italic">
+           India's true platform where creating your own original Bollywood/Hollywood style customised songs is possible in the most simplest & affordable way.
+          </p>
+      <p>
+            With a pool of talented artists, composers, singers, music producers - SONGMINES offers to convert your emotions into an exclusive custom song.
+          </p>
+       <p>
+           Make any event super magical with your favorite celebrity singer singing out your story & loved one's names in your very own exclusive song.</p>
+      <p>Let's make it viral with songmines </br>
+"ab har dil gaayega"
+          </p>
+         
+          
+        </div>
+      </div>
 
-                    <div class="team-desc">
-                      <div class="team-title">
-                        <h4>John Doe</h4>
-                        <span>Singer</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="team">
-                    <div class="team-image" style="position: relative">
-                      <a href="/checkout">
-                        <img src="images/team/3.jpg" alt="John Doe" />
-                      </a>
-                      <i
-                        id="audio-btn-2"
-                        class="i-circled i-light icon-play"
-                        style="
-                          position: absolute;
-                          bottom: 10px;
-                          right: 0;
-                          z-index: 10;
-                        "
-                      ></i>
-                      <audio src="/audio/audio1.mp3" id="audio-2"></audio>
-                    </div>
+    </div>
+  </section><!-- End About Section -->
 
-                    <div class="team-desc">
-                      <div class="team-title">
-                        <h4>John Doe</h4>
-                        <span>Singer</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="team">
-                    <div class="team-image" style="position: relative">
-                      <a href="/checkout">
-                        <img src="images/team/3.jpg" alt="John Doe" />
-                      </a>
-                      <i
-                        id="audio-btn-3"
-                        class="i-circled i-light icon-play"
-                        style="
-                          position: absolute;
-                          bottom: 10px;
-                          right: 0;
-                          z-index: 10;
-                        "
-                      ></i>
-                      <audio src="/audio/audio1.mp3" id="audio-3"></audio>
-                    </div>
+  <!-- ======= Why Us Section ======= -->
+  <section id="why-us" class="why-us">
+    <div class="container" data-aos="fade-up">
 
-                    <div class="team-desc">
-                      <div class="team-title">
-                        <h4>John Doe</h4>
-                        <span>Singer</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="team">
-                    <div class="team-image" style="position: relative">
-                      <a href="/checkout">
-                        <img src="images/team/3.jpg" alt="John Doe" />
-                      </a>
-                      <i
-                        id="audio-btn-4"
-                        class="i-circled i-light icon-play"
-                        style="
-                          position: absolute;
-                          bottom: 10px;
-                          right: 0;
-                          z-index: 10;
-                        "
-                      ></i>
-                      <audio src="/audio/audio1.mp3" id="audio-4"></audio>
-                    </div>
+      <div class="section-title">
+        <h2>songmines</h2>
+        <p>How it works</p>
+      </div>
 
-                    <div class="team-desc">
-                      <div class="team-title">
-                        <h4>John Doe</h4>
-                        <span>Singer</span>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
+      <div class="row">
 
-                <% singers.map((singer,i)=>{ %>
-
-                <div class="col-lg-3 col-md-6">
-                  <div class="team">
-                    <a href="/checkout/<%= singer._id %>">
-                      <div
-                        class="team-image"
-                        style="
-                          position: relative;
-                          background-image: url('/singers/image/<%= singer.imageName %>');
-                          height: 400px;
-                          background-repeat: no-repeat;
-                          background-size: cover;
-                          background-position: center;
-                        "
-                      ></div>
-                    </a>
-                    <div class="team-desc">
-                      <div class="team-title">
-                        <h4><%= singer.name %></h4>
-                        <span>Singer</span>
-                        <i
-                          id="audio-btn-<%= i %>"
-                          class="i-circled i-light icon-play"
-                          style="
-                            position: absolute;
-                            bottom: 10px;
-                            right: 0;
-                            z-index: 10;
-                          "
-                        ></i>
-                        <audio
-                          src="/singers/audio/<%= singer.audioName %>"
-                          id="audio-<%= i %>"
-                        ></audio>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <% }) %>
-              </div>
-            </div>
+        <div class="col-lg-4">
+          <div class="box" data-aos="zoom-in" data-aos-delay="100">
+            <span>01</span>
+            <h4>Details of the occasion & that special person</h4>
+            <p>Love Proposals, Relationships, Birthdays, Anniversaries, Weddings, Friendships or just any occasion you want to make memorable forever . . .</p>
           </div>
+        </div>
 
-          <div
-            id="works"
-            id="portfolio"
-            class="portfolio row g-0 portfolio-reveal grid-container"
-          >
-            <div class="heading-block topmargin-sm center">
-              <h3>Examples</h3>
-            </div>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <img src="/examples/33.png" alt="birthday" />
-
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://youtu.be/22TkqC9A0xY"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        ><i class="icon-line-play"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Birthday</a>
-                  </h3>
-                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <img src="/examples/32.png" alt="Mac Sunglasses" />
-
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://youtu.be/22TkqC9A0xY"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        ><i class="icon-line-play"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Proposal</a>
-                  </h3>
-                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <img src="/examples/31.png" alt="Marrige" />
-
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://youtu.be/22TkqC9A0xY"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        ><i class="icon-line-play"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Marrige</a>
-                  </h3>
-                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <img src="/examples/30.png" alt="Mac Sunglasses" />
-
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://youtu.be/22TkqC9A0xY"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        ><i class="icon-line-play"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Valentines Day</a>
-                    <span
-                      ><a href="#">Singer</a>, <a href="#">John Doe</a></span
-                    >
-                  </h3>
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <img src="/examples/29.png" alt="Mac Sunglasses" />
-
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://youtu.be/22TkqC9A0xY"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        ><i class="icon-line-play"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Valentines Day</a>
-                    <span
-                      ><a href="#">Singer</a>, <a href="#">John Doe</a></span
-                    >
-                  </h3>
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <img src="/examples/28.png" alt="birthday" />
-
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://youtu.be/22TkqC9A0xY"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        ><i class="icon-line-play"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Birthday</a>
-                  </h3>
-                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <img src="/examples/27.png" alt="Mac Sunglasses" />
-
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://youtu.be/22TkqC9A0xY"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        ><i class="icon-line-play"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Proposal</a>
-                  </h3>
-                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements"
-            >
-              <div class="grid-inner">
-                <div class="portfolio-image">
-                  <img src="/examples/26.png" alt="Marrige" />
-
-                  <div class="bg-overlay">
-                    <div
-                      class="bg-overlay-content dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    >
-                      <a
-                        href="https://youtu.be/22TkqC9A0xY"
-                        class="overlay-trigger-icon bg-light text-dark"
-                        data-hover-animate="fadeInDownSmall"
-                        data-hover-animate-out="fadeOutUpSmall"
-                        data-hover-speed="350"
-                        ><i class="icon-line-play"></i
-                      ></a>
-                    </div>
-                    <div
-                      class="bg-overlay-bg dark"
-                      data-hover-animate="fadeIn"
-                      data-hover-parent=".portfolio-item"
-                    ></div>
-                  </div>
-                </div>
-                <div class="portfolio-desc">
-                  <h3>
-                    <a href="#">Marrige</a>
-                  </h3>
-                  <span><a href="#">Singer</a>, <a href="#">John Doe</a></span>
-                </div>
-              </div>
-            </article>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="box" data-aos="zoom-in" data-aos-delay="200">
+            <span>02</span>
+            <h4>Tell us the story & emotions you want to express</h4>
+            <p>Do fill our checklist*, it will help us to cover all the aspects of your story . . .</p>
+      <p><a href="OrderNow.html">Checklist</a></p>
           </div>
+        </div>
 
-          <div
-            id="testimonials"
-            class="section parallax dark mb-0"
-            style="
-              background-image: url('images/services/home-testi-bg.jpg');
-              padding: 100px 0;
-            "
-            data-bottom-top="background-position:0px 300px;"
-            data-top-bottom="background-position:0px -300px;"
-          >
-            <div class="heading-block center">
-              <h3>What Clients Say?</h3>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="box" data-aos="zoom-in" data-aos-delay="300">
+            <span>03</span>
+            <h4> That's it</h4>
+            <p>Good things take time, but we will deliver your own original song in 6 days
+      </br></br><h4 class="p-0 m-0">songmines</br>"ab har dil gaayega"</h4></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Why Us Section -->
+
+  <!-- ======= Menu Section ======= -->
+  <section id="menu" class="menu section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>songmines</h2>
+        <p>Singers</p>
+      </div>
+
+    
+    
+    
+    
+    
+    
+    
+      <!--<div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="menu-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-starters">Starters</li>
+            <li data-filter=".filter-salads">Salads</li>
+            <li data-filter=".filter-specialty">Specialty</li>
+          </ul>
+        </div>
+      </div>-->
+
+    
+    
+     <div class="row events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide"><div class="row event-item">
+      <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Salman Ali</a>
+          </div>
+         
+        </div>
+    <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/greek-salad.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Neelanjana</a>
+          </div>
+          
+        </div>
+      
+    <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/Sachin.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Sachin Kumar</a>
+          </div>
+          
+        </div>	
+        <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/bread-barrel.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Chetna</a>
+          </div>
+          </div>
+    <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/Nihal.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Nihal Tauro</a>
+          </div>
+         
+        </div>
+        <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/cake.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Sayli Kamble</a>
+          </div>
+          
+        </div>
+      
+      
+
+        
+      
+      </div></div>
+     
+      
+      
+  <div class="swiper-slide"><div class="row event-item">
+    
+    <div class="col-lg-2 col-sm-6 menu-item text-center">
+          <img src="assets2/img/menu/Ananya.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Ananya</a>
+          </div>
+         
+        </div>
+        <div class="col-lg-2 col-sm-6 menu-item text-center">
+          <img src="assets2/img/menu/lobster-roll.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Sireesha</a>
+          </div>
+         
+        </div>
+    
+    
+      
+    <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/spinach-salad.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Shahzan</a>
+          </div>
+         
+        </div>
+    
+      <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/mozzarella.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Kinjal</a>
+          </div>
+         
+        </div>
+
+          <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/caesar.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Sharad Sharma</a>
+          </div>
+         
+        </div>
+
+        <div class="col-lg-2 col-sm-6 menu-item">
+          <img src="assets2/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">Anshika</a>
+          </div>
+          
+        </div>
+      
+      
+
+       
+
+        
+      
+      </div></div>	  
+      
+      
+      
+      
+      
+       </div>
+       </br>
+    <div class="swiper-pagination pt-5"></div>
+    
+    </div>
+    
+    
+    
+      
+
+    </div>
+  </section><!-- End Menu Section -->
+
+  
+
+  <!-- ======= Events Section ======= -->
+  <section id="events" class="events">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Originals</h2>
+        <p>Songmines Originals</p>
+      </div>
+
+      <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="row event-item">
+              <div class="col-lg-3 text-center">
+                <a href="https://youtu.be/LPYLhHWWsa4" target="_blank"><img src="assets2/img/event-birthday.jpg" class="img-fluid" alt="">Sun To Zara</a>
+              </div>
+              <div class="col-lg-3 text-center">
+               <a href="https://youtu.be/KWknyu6Vp90" target="_blank"><img src="assets2/img/event-private.jpg" class="img-fluid" alt="">Love U Momma</a>
+              </div>
+        <div class="col-lg-3 text-center">
+                <a href="https://youtu.be/LPYLhHWWsa4" target="_blank"><img src="assets2/img/event-birthday.jpg" class="img-fluid" alt="">Sun To Zara</a>
+              </div>
+              <div class="col-lg-3 text-center">
+               <a href="https://youtu.be/KWknyu6Vp90" target="_blank"><img src="assets2/img/event-private.jpg" class="img-fluid" alt="">Love U Momma</a>
+              </div>
             </div>
-            <div
-              class="fslider testimonial testimonial-full"
-              data-animation="fade"
-              data-arrows="false"
-            >
-              <div class="flexslider">
-                <div class="slider-wrap">
-                  <div class="slide">
-                    <div class="testi-image">
-                      <a href="#"
-                        ><img
-                          src="images/testimonials/3.jpg"
-                          alt="Customer Testimonails"
-                      /></a>
-                    </div>
-                    <div class="testi-content">
-                      <p>
-                        Similique fugit repellendus expedita excepturi iure
-                        perferendis provident quia eaque. Repellendus, vero
-                        numquam?
-                      </p>
-                      <div class="testi-meta">
-                        Steve Jobs
-                        <span>Apple Inc.</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slide">
-                    <div class="testi-image">
-                      <a href="#"
-                        ><img
-                          src="images/testimonials/2.jpg"
-                          alt="Customer Testimonails"
-                      /></a>
-                    </div>
-                    <div class="testi-content">
-                      <p>
-                        Natus voluptatum enim quod necessitatibus quis expedita
-                        harum provident eos obcaecati id culpa corporis
-                        molestias.
-                      </p>
-                      <div class="testi-meta">
-                        Collis Ta'eed
-                        <span>Envato Inc.</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slide">
-                    <div class="testi-image">
-                      <a href="#"
-                        ><img
-                          src="images/testimonials/1.jpg"
-                          alt="Customer Testimonails"
-                      /></a>
-                    </div>
-                    <div class="testi-content">
-                      <p>
-                        Incidunt deleniti blanditiis quas aperiam recusandae
-                        consequatur ullam quibusdam cum libero illo rerum!
-                      </p>
-                      <div class="testi-meta">
-                        John Doe
-                        <span>XYZ Inc.</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          </div><!-- End testimonial item -->
+
+          <!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="row event-item">
+              <div class="col-lg-3 text-center">
+                <a href="https://youtu.be/LPYLhHWWsa4" target="_blank"><img src="assets2/img/event-birthday.jpg" class="img-fluid" alt="">Sun To Zara</a>
+              </div>
+              <div class="col-lg-3 text-center">
+               <a href="https://youtu.be/KWknyu6Vp90" target="_blank"><img src="assets2/img/event-private.jpg" class="img-fluid" alt="">Love U Momma</a>
+              </div>
+        <div class="col-lg-3 text-center">
+                <a href="https://youtu.be/LPYLhHWWsa4" target="_blank"><img src="assets2/img/event-birthday.jpg" class="img-fluid" alt="">Sun To Zara</a>
+              </div>
+              <div class="col-lg-3 text-center">
+               <a href="https://youtu.be/KWknyu6Vp90" target="_blank"><img src="assets2/img/event-private.jpg" class="img-fluid" alt="">Love U Momma</a>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Events Section -->
+
+  
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Reviews</h2>
+        <p>What our celebs / clients says</p>
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets2/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Aditya Narayan</h3>
+              <h4>Singer & Anchor</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets2/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Nidhi</h3>
+              <h4>Creatives</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="assets2/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Senjuti Das</h3>
+              <h4>Singer</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          
+
+          
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Testimonials Section -->
+
+ 
+
+  <!-- ======= Chefs Section ======= -->
+ <!-- <section id="chefs" class="chefs">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Chefs</h2>
+        <p>Our Proffesional Chefs</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="member" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets2/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>Walter White</h4>
+                <span>Master Chef</span>
+              </div>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <%- include('footer'); -%>
+        <div class="col-lg-4 col-md-6">
+          <div class="member" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets2/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>Sarah Jhonson</h4>
+                <span>Patissier</span>
+              </div>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="member" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets2/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>William Anderson</h4>
+                <span>Cook</span>
+              </div>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>-->
+  </section><!-- End Chefs Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Contact Us</p>
+      </div>
     </div>
 
-    <div id="gotoTop" class="icon-angle-up"></div>
+    
 
-    <script
-      data-cfasync="false"
-      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/plugins.min.js"></script>
+    <div class="container" data-aos="fade-up">
 
-    <script src="js/functions.js"></script>
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
-      integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
-      data-cf-beacon='{"rayId":"796ed62edbd7e62a","token":"0627f0b8b73941069bc19139e63db853","version":"2022.11.3","si":100}'
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/audio.js"></script>
-  </body>
+      <div class="row mt-5">
+
+        <div class="col-lg-4">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+        <p>SONGMINES, </br> Andheri west, Mumbai, India</p>
+            </div>
+
+            
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p><a href="mailto:songminesteam@gmail.com" target="_blank">songminesteam@gmail.com</a></p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Whats app/Botim:</h4>
+              <p><a href="https://wa.me/+919136336301" target="_blank">+91-91 363 363 01</a></p>
+        
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<%- include('footer'); -%>
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets2/vendor/aos/aos.js"></script>
+<script src="assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets2/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets2/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets2/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets2/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets2/js/main.js"></script>
+
+</body>
+
 </html>

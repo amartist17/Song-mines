@@ -3,6 +3,7 @@ const AppError = require("../utils/appError");
 // const Product = require("./../models/productModel");
 const Singer = require("../models/singerModel");
 const User = require("../models/userModel");
+const Form = require("../models/formModel");
 const Order = require("../models/orderModel");
 require("dotenv").config();
 const Razorpay = require("razorpay");
@@ -52,6 +53,17 @@ exports.success = catchAsync(async (req, res, next) => {
         $each: [newOrder._id],
         $position: 0,
       },
+    },
+  });
+  await Form.findByIdAndUpdate(req.body.form, {
+    paid: true,
+
+    function(err, docs) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("updated");
+      }
     },
   });
   next();

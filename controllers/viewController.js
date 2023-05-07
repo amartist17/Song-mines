@@ -11,12 +11,13 @@ exports.home = catchAsync(async (req, res, next) => {
   res.status(200).render("index", { singers });
 });
 exports.form = catchAsync(async (req, res, next) => {
-  res.status(200).render("form", { id: req.params.id });
+  let singers = await Singer.find({ active: true });
+  res.status(200).render("form", { singers });
 });
 exports.formSubmit = catchAsync(async (req, res, next) => {
-  req.body.id = req.params.id;
   let newForm = await Form.create(req.body);
-  res.redirect("/");
+  // console.log(req.body);
+  res.redirect("/checkout/" + newForm._id + "/" + req.body.id);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
@@ -50,9 +51,12 @@ exports.dashboard = catchAsync(async (req, res, next) => {
 });
 
 exports.checkout = catchAsync(async (req, res, next) => {
-  if (req.params.singer.match(/^[0-9a-fA-F]{24}$/)) {
+  if (
+    req.params.form.match(/^[0-9a-fA-F]{24}$/) &&
+    req.params.singer.match(/^[0-9a-fA-F]{24}$/)
+  ) {
     let singer = await Singer.findOne({ _id: req.params.singer });
-    res.status(200).render("checkout", { singer });
+    res.status(200).render("checkout", { singer, form: req.params.form });
   }
 });
 // exports.me = catchAsync(async (req, res, next) => {});
