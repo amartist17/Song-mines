@@ -23,6 +23,7 @@ router.get(
   viewController.checkout
 );
 // router.get("/checkout", viewController.checkout);
+router.get("/viewform/:formid", viewController.viewForm);
 router.get("/form", viewController.form);
 router.post("/form", viewController.formSubmit);
 

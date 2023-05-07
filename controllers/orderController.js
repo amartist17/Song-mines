@@ -34,6 +34,7 @@ exports.success = catchAsync(async (req, res, next) => {
     singer: req.body.singer,
     price: req.body.price / 100,
     desc: req.body.desc,
+    form: req.body.form,
     razorpay_payment_id: req.body.razorpay_payment_id,
     razorpay_order_id: req.body.razorpay_order_id,
     razorpay_signature: req.body.razorpay_signature,

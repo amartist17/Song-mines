@@ -84,6 +84,7 @@
                                 <th>Time</th>
                                 <th>User</th>
                                 <th>Order</th>
+                                <th>Form</th>
                                 <th>Price</th>
                                 <th>Singer</th>
                                 <th>Status</th>
@@ -99,7 +100,12 @@
                                   >
                                 </td>
                                 <td><%= order.user.email%></td>
-                                <td style="width: 50%"><%= order.desc%></td>
+                                <td><%= order.desc%></td>
+                                <td>
+                                  <a href="/viewform/<%= order.form%>"
+                                    >Details</a
+                                  >
+                                </td>
                                 <td><%= order.price %></td>
                                 <td><%= order.singer.name %></td>
                                 <td>

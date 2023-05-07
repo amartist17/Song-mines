@@ -8,6 +8,10 @@ const orderSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "User",
   },
+  form: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Form",
+  },
   singer: {
     type: mongoose.Schema.ObjectId,
     ref: "Singer",

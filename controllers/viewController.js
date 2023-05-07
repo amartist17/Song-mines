@@ -50,6 +50,11 @@ exports.dashboard = catchAsync(async (req, res, next) => {
   }
 });
 
+exports.viewForm = catchAsync(async (req, res, next) => {
+  let form = await Form.findOne({ _id: req.params.formid });
+  res.json(form);
+});
+
 exports.checkout = catchAsync(async (req, res, next) => {
   if (
     req.params.form.match(/^[0-9a-fA-F]{24}$/) &&
