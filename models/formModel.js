@@ -10,51 +10,51 @@ const formSchema = new mongoose.Schema({
   },
   name: {
     type: String,
-    required: true,
+    // required: true,
   },
   number: {
     type: String,
-    required: true,
+    // required: true,
   },
   whatsapp: {
     type: String,
-    required: true,
+    // required: true,
   },
   email: {
     type: String,
-    required: true,
+    // required: true,
   },
   occasion: {
     type: String,
-    required: true,
+    // required: true,
   },
   receiverName: {
     type: String,
-    required: true,
+    // required: true,
   },
   relationship: {
     type: String,
-    required: true,
+    // required: true,
   },
   story: {
     type: String,
-    required: true,
+    // required: true,
   },
   storyMust: {
     type: String,
-    required: true,
+    // required: true,
   },
   feel: {
     type: String,
-    required: true,
+    // required: true,
   },
   reference: {
     type: String,
-    required: true,
+    // required: true,
   },
   tempo: {
     type: String,
-    required: true,
+    // required: true,
   },
   paid: {
     type: Boolean,
