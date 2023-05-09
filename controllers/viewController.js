@@ -5,6 +5,8 @@ const Singer = require("./../models/singerModel");
 const User = require("./../models/userModel");
 const Order = require("./../models/orderModel");
 const Form = require("./../models/formModel");
+const MailList = require("./../models/mailListModel");
+const nodemailer = require("nodemailer");
 
 exports.home = catchAsync(async (req, res, next) => {
   let singers = await Singer.find({ active: true });
@@ -13,6 +15,10 @@ exports.home = catchAsync(async (req, res, next) => {
 exports.form = catchAsync(async (req, res, next) => {
   let singers = await Singer.find({ active: true });
   res.status(200).render("form", { singers });
+});
+exports.addMailList = catchAsync(async (req, res, next) => {
+  let newMail = await MailList.create(req.body);
+  res.redirect("/");
 });
 exports.formSubmit = catchAsync(async (req, res, next) => {
   let newForm = await Form.create(req.body);
@@ -73,4 +79,37 @@ exports.checkout = catchAsync(async (req, res, next) => {
     res.status(200).render("checkout", { singer, form: req.params.form });
   }
 });
+
+exports.mail = catchAsync(async (req, res, next) => {
+  try {
+    let transporter = nodemailer.createTransport({
+      host: "mail.songmines.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.SERVEREMAILID, // generated ethereal user
+        pass: process.env.SERVEREMAILPASSWORD, // generated ethereal password
+      },
+    });
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: "info@songmines.com", // sender address
+      to: "info@songmines.com", // list of receivers
+      subject: req.body.subject, // Subject line
+      text:
+        "By: " +
+        req.body.name +
+        "\nfrom: " +
+        req.body.email +
+        "\n" +
+        req.body.message +
+        " ", // plain text body
+    });
+    res.redirect("/");
+  } catch (err) {
+    console.log(err);
+    res.redirect("/");
+  }
+});
+
 // exports.me = catchAsync(async (req, res, next) => {});

@@ -107,85 +107,91 @@
                     </div>
             
                 <form class="row">
-            <div class="col-lg-4 col-sm-12"><div class="form-group">
-                               <label>Choose occasion to Gift a Song</label>
-                                <select name="occasion" class="form-control">
-                                     <option>Select</option>
-                                      <option>Love Expressions</option>
-                                      <option>Propose</option>
-                                     <option>Birthday</option>
-                                     <option>Anniversary</option>
-                                     <option>Friendship</option>
-                                     <option>Relationship (Father, Mother, Daughter,  Husband, Wife, kids, etc.)</option>
-                                     <option>Big Fat Wedding (Engagement, Pre-Wedding, Mehendi, Sangeet, Varmala, Vedic Pheras, Vidai, etc.</option>
-                                     <option>Baby Shower</option>
-                                     <option>School / Collège Anthem</option>
-                                     <option>Brand Building Jingles</option>
-                                     <option>Others (Sorry, Missing You, Heart Break, etc.)</option>
-                                     </select>
-                         </div></div>
-                    
-                    
+                  <div class="row">
                     <div class="col-lg-4 col-sm-12"><div class="form-group">
-                               <label>Name of the person for whom the song to be created</label>
-                                   <input type="text" name="receiverName" value="" class="form-control" required>
-                         </div></div>
+                      <label>Choose occasion to Gift a Song</label>
+                       <select name="occasion" class="form-control">
+                            <option>Select</option>
+                             <option>Love Expressions</option>
+                             <option>Propose</option>
+                            <option>Birthday</option>
+                            <option>Anniversary</option>
+                            <option>Friendship</option>
+                            <option>Relationship (Father, Mother, Daughter,  Husband, Wife, kids, etc.)</option>
+                            <option>Big Fat Wedding (Engagement, Pre-Wedding, Mehendi, Sangeet, Varmala, Vedic Pheras, Vidai, etc.</option>
+                            <option>Baby Shower</option>
+                            <option>School / Collège Anthem</option>
+                            <option>Brand Building Jingles</option>
+                            <option>Others (Sorry, Missing You, Heart Break, etc.)</option>
+                            </select>
+                </div></div>
+           
+           
+           <div class="col-lg-4 col-sm-12"><div class="form-group">
+                      <label>Name of the person for whom the song to be created</label>
+                          <input type="text" name="receiverName" value="" class="form-control" required>
+                </div></div>
+           
+           <div class="col-lg-4 col-sm-12"><div class="form-group">
+                      <label>Relationship of the person for whom the song to be created</label>
+                          <input type="text" name="relationship" value="" class="form-control" placeholder="Friend/Husband/Wife/Boss etc." required>
+                </div></div>
+                  </div>
+            
                     
-                    <div class="col-lg-4 col-sm-12"><div class="form-group">
-                               <label>Relationship of the person for whom the song to be created</label>
-                                   <input type="text" name="relationship" value="" class="form-control" placeholder="Friend/Husband/Wife/Boss etc." required>
-                         </div></div>
                     
-                    
-                    
+                    <br>
                     <div class="col-lg-12 col-sm-12"><div class="form-group">
                         <label>Tell us your story, we will make it sing</label></br>
                         <p class="Instruction mb-1">How you met; what you like about him/her; memories of him/her which pops a smile, how he/she inspired you; hangout stories; Important dates to mention; their importance in your life; embarrassing  moments you tease them with; heart of your story; anything else to mention</p>
                                    <textarea class="form-control" name="story" id="" rows="2" placeholder="" required></textarea>
                          </div></div>
+                         <br>
                     <div class="col-lg-12 col-sm-12"><div class="form-group">
                         <label>What are the things from your story that MUST be included in the song?</label>
-                                   <textarea class="form-control" name="storyMust" id="" rows="1" placeholder="" required></textarea>
+                                   <textarea class="form-control" name="storyMust" id="" rows="1" placeholder="" ></textarea>
                          </div></div>
-                    
-                    <div class="col-lg-4 col-sm-12"><div class="form-group">
-                               <label>Feel of your song</label>
-                                   <select name="feel" class="form-control">
-                                     <option>Select</option>
-                                      <option>Love</option>
-                                      <option>Heart Felt</option>
-                                     <option>Happy</option>
-                                     <option>Sad</option>
-                                        <option>Funny</option>
-                                     <option>Energetic</option>
-                        </select>
-                         </div></div>
-                    
-                    <div class="col-lg-4 col-sm-12"><div class="form-group">
-                               <label>Any similar song references from Bollywood/Hollywood</label>
-                                   <input type="text" name="reference" value="" class="form-control" required>
-                         </div></div>
-                    
-                    <div class="col-lg-2 col-sm-12"><div class="form-group">
-                               <label>Speed/Tempo of the song</label>
-                                    <select name="tempo" class="form-control">
-                                     <option>Select</option>
-                                      <option >Slow</option>
-                                      <option >Mid Tempo</option>
-                                     <option >Fast</option>
-                                     <option >Whatever Suits</option>
-                        </select>
-                         </div>
-                        </div>
-                    <div class="col-lg-2 col-sm-12"><div class="form-group">
-                               <label>Singer</label>
-                                    <select name="id" class="form-control" name="id">
-                                     <% singers.map(s=>{ %>
-                                      <option value="<%= s._id %>"><%= s.name %></option>
-                                      <% }) %>
-                        </select>
-                         </div>
-                        </div>
+                         <br>
+                    <div class="row">
+                      <div class="col-lg-2 col-sm-12"><div class="form-group">
+                        <label>Feel of your song</label>
+                            <select name="feel" class="form-control">
+                              <option>Select</option>
+                               <option>Love</option>
+                               <option>Heart Felt</option>
+                              <option>Happy</option>
+                              <option>Sad</option>
+                                 <option>Funny</option>
+                              <option>Energetic</option>
+                 </select>
+                  </div></div>
+             
+             <div class="col-lg-4 col-sm-12"><div class="form-group">
+                        <label>Any similar song references from Bollywood/Hollywood</label>
+                            <input type="text" name="reference" value="" class="form-control" required>
+                  </div></div>
+             
+             <div class="col-lg-3 col-sm-12"><div class="form-group">
+                        <label>Speed/Tempo of the song</label>
+                             <select name="tempo" class="form-control">
+                              <option>Select</option>
+                               <option >Slow</option>
+                               <option >Mid Tempo</option>
+                              <option >Fast</option>
+                              <option >Whatever Suits</option>
+                 </select>
+                  </div>
+                 </div>
+             <div class="col-lg-3 col-sm-12"><div class="form-group">
+                        <label>Singer</label>
+                             <select name="id" class="form-control" name="id">
+                               <option value="Male">Male</option>
+                               <option value="Female">Female</option>
+                 </select>
+                  </div>
+                 </div>
+                    </div>
+                   
                          <button type="submit"  class="" style="width: 10%; margin-top: 16px; background-color:black; color:white; border: 2px solid #D3AF71; border-radius: 16px"
           >Order Now</button
         >

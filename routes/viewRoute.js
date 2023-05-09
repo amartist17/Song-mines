@@ -27,6 +27,8 @@ router.get("/viewform/:formid", viewController.viewForm);
 router.get("/form", viewController.form);
 router.post("/form", viewController.formSubmit);
 router.get("/thank-you", viewController.thankYou);
+router.post("/mail", viewController.mail);
+router.post("/addMailList", viewController.addMailList);
 
 router.get("/dashboard", authController.protect, viewController.dashboard);
 router.post("/add-singer", authController.protect, adminController.addSinger);
