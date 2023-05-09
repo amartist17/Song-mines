@@ -60,6 +60,10 @@ const formSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  date: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
 module.exports = mongoose.model("Form", formSchema);

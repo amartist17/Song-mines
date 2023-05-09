@@ -83,35 +83,33 @@
                               <tr>
                                 <th>Time</th>
                                 <th>User</th>
-                                <th>Order</th>
+                                <th>Email</th>
                                 <th>Form</th>
-                                <th>Price</th>
-                                <th>Singer</th>
-                                <th>Status</th>
+                                <!-- <th>Price</th> -->
+                                <!-- <th>Singer</th> -->
+                                <!-- <th>Status</th> -->
                               </tr>
                             </thead>
                             <tbody>
-                              <% orders.map(order=>{ %>
+                              <% forms.map(form=>{ %>
                               <tr>
                                 <td>
                                   <code
-                                    ><%= order.date.toLocaleDateString('en-US');
+                                    ><%= form.date.toLocaleDateString('en-US');
                                     %></code
                                   >
                                 </td>
-                                <td><%= order.user.email%></td>
-                                <td><%= order.desc%></td>
+                                <td><%= form.name%></td>
+                                <td><%= form.email%></td>
+
                                 <td>
-                                  <a href="/viewform/<%= order.form%>"
-                                    >Details</a
-                                  >
+                                  <a href="/viewform/<%= form._id%>">Details</a>
                                 </td>
-                                <td><%= order.price %></td>
-                                <td><%= order.singer.name %></td>
-                                <td>
-                                  <form
+
+                                <!-- <td> -->
+                                <!-- <form
                                     style="margin: 0%"
-                                    action="/order/change-order-status/<%= order._id %>"
+                                    action="/order/change-order-status/"
                                     method="post"
                                     enctype="application/x-www-form-urlencoded"
                                   >
@@ -121,7 +119,7 @@
                                       style="margin: 0%"
                                     >
                                       <option value="">
-                                        <%= order.status %>
+                                      
                                       </option>
                                       <option value="Delivered">
                                         Delivered
@@ -131,8 +129,8 @@
                                       </option>
                                     </select>
                                     <button type="submit">Submit</button>
-                                  </form>
-                                </td>
+                                  </form> -->
+                                <!-- </td> -->
                               </tr>
 
                               <% }) %>

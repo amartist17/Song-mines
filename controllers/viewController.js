@@ -17,7 +17,14 @@ exports.form = catchAsync(async (req, res, next) => {
 exports.formSubmit = catchAsync(async (req, res, next) => {
   let newForm = await Form.create(req.body);
   // console.log(req.body);
-  res.redirect("/checkout/" + newForm._id + "/" + req.body.id);
+  // res.redirect("/checkout/" + newForm._id + "/" + req.body.id);
+  res.redirect("/thank-you");
+});
+exports.thankYou = catchAsync(async (req, res, next) => {
+  // let newForm = await Form.create(req.body);
+  // console.log(req.body);
+  // res.redirect("/checkout/" + newForm._id + "/" + req.body.id);
+  res.render("thank-you");
 });
 
 exports.login = catchAsync(async (req, res, next) => {
@@ -33,14 +40,16 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 
 exports.dashboard = catchAsync(async (req, res, next) => {
   if (req.user.role === "admin") {
-    let orders = await Order.find({})
-      .sort({ date: -1 })
-      .limit(10)
-      .populate(["user", "singer"]);
+    // let orders = await Order.find({})
+    //   .sort({ date: -1 })
+    //   .limit(10)
+    //   .populate(["user", "singer"]);
+    let forms = await Form.find({}).sort({ date: -1 }).limit(10);
+    // .populate(["user", "singer"]);
     let singers = await Singer.find({ active: true });
     // console.log(orders);
     // orders.reverse();
-    res.status(200).render("admin-dashboard", { orders, singers });
+    res.status(200).render("admin-dashboard", { forms, singers });
   } else {
     // console.log(req.user);
     let user = await User.findById(req.user._id).populate("orders");
