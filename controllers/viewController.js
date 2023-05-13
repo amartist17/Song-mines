@@ -24,6 +24,23 @@ exports.formSubmit = catchAsync(async (req, res, next) => {
   let newForm = await Form.create(req.body);
   // console.log(req.body);
   // res.redirect("/checkout/" + newForm._id + "/" + req.body.id);
+
+  let transporter = nodemailer.createTransport({
+    host: "mail.songmines.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.SERVEREMAILID, // generated ethereal user
+      pass: process.env.SERVEREMAILPASSWORD, // generated ethereal password
+    },
+  });
+  // send mail with defined transport object
+  let info = await transporter.sendMail({
+    from: "info@songmines.com", // sender address
+    to: "info@songmines.com", // list of receivers
+    subject: "New Order", // Subject line
+    text: JSON.stringify(newForm),
+  });
   res.redirect("/thank-you");
 });
 exports.thankYou = catchAsync(async (req, res, next) => {
@@ -50,12 +67,15 @@ exports.dashboard = catchAsync(async (req, res, next) => {
     //   .sort({ date: -1 })
     //   .limit(10)
     //   .populate(["user", "singer"]);
-    let forms = await Form.find({}).sort({ date: -1 }).limit(10);
+    let page = Number(req.query.page) || 1;
+    let limit = 20;
+    let skip = (page - 1) * limit;
+    let forms = await Form.find({}).sort({ date: -1 }).skip(skip).limit(limit);
     // .populate(["user", "singer"]);
     let singers = await Singer.find({ active: true });
     // console.log(orders);
     // orders.reverse();
-    res.status(200).render("admin-dashboard", { forms, singers });
+    res.status(200).render("admin-dashboard", { forms, singers, page });
   } else {
     // console.log(req.user);
     let user = await User.findById(req.user._id).populate("orders");

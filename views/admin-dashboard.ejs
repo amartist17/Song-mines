@@ -136,6 +136,15 @@
                               <% }) %>
                             </tbody>
                           </table>
+                          <% if(page != 1){ %>
+                          <a style="padding: 4px 6px; background-color: white"; color: white; border: 1px solid #e8e611; border-radius: 16px;                             href="/dashboard?page=<%= page-1 %>"
+                            class="previous"
+                            >Prev</a
+                          >
+                          <% } %>
+                          <a style="padding: 4px 6px; background-color: white"; color: white; border: 1px solid #e8e611; border-radius: 16px; href="/dashboard?page=<%= page+1 %>" class="next"
+                            >Next</a
+                          >
                         </div>
                         <div class="tab-content clearfix" id="tab-posts">
                           <form
@@ -271,5 +280,8 @@
       data-cf-beacon='{"rayId":"796ed795c9d2e62a","token":"0627f0b8b73941069bc19139e63db853","version":"2022.11.3","si":100}'
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(".prev").click(function () {});
+    </script>
   </body>
 </html>
